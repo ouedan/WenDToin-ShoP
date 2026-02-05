@@ -2,6 +2,409 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - Maison de Maroquinerie</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header-admin {
+            background: #C5A572;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header-admin h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header-admin p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .section-modif {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .section-modif h2 {
+            color: #C5A572;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #C5A572;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #C5A572;
+            outline: none;
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .btn {
+            background: #C5A572;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background: #B08A5D;
+        }
+        
+        .btn-generer {
+            background: #2c3e50;
+            margin-top: 30px;
+            font-size: 20px;
+            padding: 20px;
+        }
+        
+        .btn-generer:hover {
+            background: #1a252f;
+        }
+        
+        .produit-item {
+            background: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #C5A572;
+        }
+        
+        .produit-item h3 {
+            color: #C5A572;
+            margin-bottom: 15px;
+        }
+        
+        .aperçu {
+            margin-top: 40px;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .aperçu h2 {
+            color: #C5A572;
+            margin-bottom: 20px;
+        }
+        
+        #codeFinal {
+            width: 100%;
+            min-height: 400px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            background: #f8f9fa;
+            margin-bottom: 20px;
+        }
+        
+        .instructions {
+            background: #e8f4fc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .instructions h3 {
+            color: #2980b9;
+            margin-bottom: 15px;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header-admin h1 {
+                font-size: 2rem;
+            }
+            
+            .section-modif {
+                padding: 15px;
+            }
+        }
+        
+        .url-help {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .url-help a {
+            color: #C5A572;
+            text-decoration: none;
+        }
+        
+        .url-help a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="header-admin">
+        <h1><i class="fas fa-cog"></i> Administration Site Web</h1>
+        <p>Modifiez votre site "Maison de Maroquinerie" sans coder</p>
+    </div>
+    
+    <div class="instructions">
+        <h3><i class="fas fa-info-circle"></i> Comment utiliser cet outil :</h3>
+        <ol>
+            <li>Modifiez le contenu dans les champs ci-dessous</li>
+            <li>Cliquez sur "GÉNÉRER LE NOUVEAU CODE"</li>
+            <li>Copiez tout le code généré</li>
+            <li>Allez sur <a href="https://app.netlify.com" target="_blank">Netlify</a></li>
+            <li>Remplacez votre fichier index.html par le nouveau code</li>
+            <li>Votre site sera mis à jour en 1 minute !</li>
+        </ol>
+    </div>
+    
+    <!-- SECTION HERO -->
+    <div class="section-modif">
+        <h2><i class="fas fa-star"></i> Section Principale (Hero)</h2>
+        <div class="form-group">
+            <label for="titrePrincipal">Titre Principal</label>
+            <input type="text" id="titrePrincipal" value="L'Artisanat au Service de l'Élégance">
+        </div>
+        <div class="form-group">
+            <label for="texteHero">Texte de présentation</label>
+            <textarea id="texteHero">Chaque sac est une pièce unique, réalisée sur mesure dans notre atelier parisien avec des cuirs d'exception sélectionnés chez les meilleurs tanneurs français.</textarea>
+        </div>
+    </div>
+    
+    <!-- PRODUIT 1 -->
+    <div class="produit-item">
+        <h3><i class="fas fa-shopping-bag"></i> Produit 1 - Classique Noir</h3>
+        <div class="form-group">
+            <label for="produit1_nom">Nom du produit</label>
+            <input type="text" id="produit1_nom" value="Classique Noir">
+        </div>
+        <div class="form-group">
+            <label for="produit1_prix">Prix (€)</label>
+            <input type="text" id="produit1_prix" value="290">
+        </div>
+        <div class="form-group">
+            <label for="produit1_description">Description</label>
+            <textarea id="produit1_description">Sac main en cuir pleine fleur français, tannage végétal. Fermoir doré 24 carats, doublure soie naturelle, finitions main.</textarea>
+        </div>
+        <div class="form-group">
+            <label for="produit1_image">URL de l'image</label>
+            <input type="text" id="produit1_image" value="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+            <div class="url-help">
+                Trouvez des images gratuites sur <a href="https://unsplash.com" target="_blank">Unsplash.com</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PRODUIT 2 -->
+    <div class="produit-item">
+        <h3><i class="fas fa-shopping-bag"></i> Produit 2 - Cabas Camel</h3>
+        <div class="form-group">
+            <label for="produit2_nom">Nom du produit</label>
+            <input type="text" id="produit2_nom" value="Cabas Camel">
+        </div>
+        <div class="form-group">
+            <label for="produit2_prix">Prix (€)</label>
+            <input type="text" id="produit2_prix" value="340">
+        </div>
+        <div class="form-group">
+            <label for="produit2_description">Description</label>
+            <textarea id="produit2_description">Cabas souple en cuir veg-tan italien, vieillissement naturel magnifique. Intérieur organisé avec poches zippées.</textarea>
+        </div>
+        <div class="form-group">
+            <label for="produit2_image">URL de l'image</label>
+            <input type="text" id="produit2_image" value="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+        </div>
+    </div>
+    
+    <!-- PRODUIT 3 -->
+    <div class="produit-item">
+        <h3><i class="fas fa-shopping-bag"></i> Produit 3 - Pochette Minuit</h3>
+        <div class="form-group">
+            <label for="produit3_nom">Nom du produit</label>
+            <input type="text" id="produit3_nom" value="Pochette Minuit">
+        </div>
+        <div class="form-group">
+            <label for="produit3_prix">Prix (€)</label>
+            <input type="text" id="produit3_prix" value="210">
+        </div>
+        <div class="form-group">
+            <label for="produit3_description">Description</label>
+            <textarea id="produit3_description">Pochette soirée en cuir grainé français, chaîne dorée détachable. Parfaite pour vos soirées les plus élégantes.</textarea>
+        </div>
+        <div class="form-group">
+            <label for="produit3_image">URL de l'image</label>
+            <input type="text" id="produit3_image" value="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+        </div>
+    </div>
+    
+    <!-- SECTION ATELIER -->
+    <div class="section-modif">
+        <h2><i class="fas fa-building"></i> Section Atelier</h2>
+        <div class="form-group">
+            <label for="atelier_titre">Titre de la section</label>
+            <input type="text" id="atelier_titre" value="Notre Atelier Parisien">
+        </div>
+        <div class="form-group">
+            <label for="atelier_soustitre">Sous-titre</label>
+            <input type="text" id="atelier_soustitre" value="Savoir-faire Artisanal">
+        </div>
+        <div class="form-group">
+            <label for="atelier_description">Description</label>
+            <textarea id="atelier_description">Situé au cœur de Paris, notre atelier perpétue un savoir-faire traditionnel transmis depuis trois générations. Chaque sac est conçu, coupé et assemblé à la main par nos artisans.</textarea>
+        </div>
+        <div class="form-group">
+            <label for="atelier_image">URL de l'image de l'atelier</label>
+            <input type="text" id="atelier_image" value="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+        </div>
+    </div>
+    
+    <!-- SECTION CONTACT -->
+    <div class="section-modif">
+        <h2><i class="fas fa-address-book"></i> Informations de Contact</h2>
+        <div class="form-group">
+            <label for="contact_whatsapp">Numéro WhatsApp</label>
+            <input type="text" id="contact_whatsapp" value="+33 6 12 34 56 78">
+        </div>
+        <div class="form-group">
+            <label for="contact_instagram">Compte Instagram</label>
+            <input type="text" id="contact_instagram" value="@maisonmaroquinerie">
+        </div>
+        <div class="form-group">
+            <label for="contact_email">Adresse Email</label>
+            <input type="text" id="contact_email" value="contact@maison-maroquinerie.com">
+        </div>
+    </div>
+    
+    <!-- BOUTON GÉNÉRER -->
+    <button class="btn btn-generer" onclick="genererCodeSite()">
+        <i class="fas fa-code"></i> GÉNÉRER LE NOUVEAU CODE
+    </button>
+    
+    <!-- RÉSULTAT -->
+    <div class="aperçu" id="apercuSection">
+        <h2><i class="fas fa-file-code"></i> Code HTML Généré</h2>
+        <p><strong>Instructions :</strong> Copiez TOUT le code ci-dessous, puis allez sur Netlify pour remplacer votre index.html</p>
+        <textarea id="codeFinal" readonly></textarea>
+        <button class="btn" onclick="copierCode()">
+            <i class="fas fa-copy"></i> COPIER LE CODE
+        </button>
+        <p style="margin-top: 15px; color: #27ae60; display: none;" id="confirmationCopie">
+            <i class="fas fa-check-circle"></i> Code copié avec succès !
+        </p>
+    </div>
+    
+    <script>
+        // Fonction pour générer le code HTML complet
+        function genererCodeSite() {
+            // Récupérer toutes les valeurs
+            const titrePrincipal = document.getElementById('titrePrincipal').value;
+            const texteHero = document.getElementById('texteHero').value;
+            
+            const produit1 = {
+                nom: document.getElementById('produit1_nom').value,
+                prix: document.getElementById('produit1_prix').value,
+                description: document.getElementById('produit1_description').value,
+                image: document.getElementById('produit1_image').value
+            };
+            
+            const produit2 = {
+                nom: document.getElementById('produit2_nom').value,
+                prix: document.getElementById('produit2_prix').value,
+                description: document.getElementById('produit2_description').value,
+                image: document.getElementById('produit2_image').value
+            };
+            
+            const produit3 = {
+                nom: document.getElementById('produit3_nom').value,
+                prix: document.getElementById('produit3_prix').value,
+                description: document.getElementById('produit3_description').value,
+                image: document.getElementById('produit3_image').value
+            };
+            
+            const atelier = {
+                titre: document.getElementById('atelier_titre').value,
+                soustitre: document.getElementById('atelier_soustitre').value,
+                description: document.getElementById('atelier_description').value,
+                image: document.getElementById('atelier_image').value
+            };
+            
+            const contact = {
+                whatsapp: document.getElementById('contact_whatsapp').value,
+                instagram: document.getElementById('contact_instagram').value,
+                email: document.getElementById('contact_email').value
+            };
+            
+            // Générer le code HTML complet
+            const codeHTML = `<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- SEO Optimisé -->
@@ -14,7 +417,7 @@
     <!-- Open Graph pour réseaux sociaux -->
     <meta property="og:title" content="Maison de Maroquinerie - Sacs à Main Artisanaux de Luxe">
     <meta property="og:description" content="Chaque sac est une pièce unique, réalisée sur mesure dans notre atelier parisien avec des cuirs d'exception">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:image" content="${produit1.image}">
     <meta property="og:url" content="https://maison-maroquinerie.netlify.app">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
@@ -23,7 +426,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Maison de Maroquinerie - Sacs à Main Artisanaux">
     <meta name="twitter:description" content="Maroquinerie de luxe fabriquée à la main en France">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta name="twitter:image" content="${produit1.image}">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👜</text></svg>">
@@ -40,7 +443,6 @@
             --padding-desktop: 20px;
         }
         
-        /* Reset amélioré pour mobile */
         * { 
             margin: 0; 
             padding: 0; 
@@ -73,7 +475,7 @@
             width: 100%;
         }
         
-        /* ===== HEADER MOBILE FIRST ===== */
+        /* ===== HEADER ===== */
         header {
             padding: 20px 0;
             text-align: center;
@@ -102,7 +504,6 @@
             margin-bottom: 15px;
         }
         
-        /* Navigation optimisée mobile */
         nav {
             display: flex;
             justify-content: center;
@@ -143,32 +544,7 @@
             outline: none;
         }
         
-        /* Bouton modifier en haut à droite */
-        .btn-modifier {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 9999;
-            background: var(--gold);
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-        }
-        
-        .btn-modifier:hover {
-            background: #B08A5D;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        
-        /* ===== HERO RESPONSIVE ===== */
+        /* ===== HERO ===== */
         .hero {
             background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)),
                         url('https://images.unsplash.com/photo-1591561954557-26941169b49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
@@ -201,7 +577,7 @@
             line-height: 1.6;
         }
         
-        /* ===== PRODUITS RESPONSIVE ===== */
+        /* ===== PRODUITS ===== */
         .produits-titre {
             text-align: center;
             font-size: 2rem;
@@ -218,7 +594,6 @@
             margin-bottom: 60px;
         }
         
-        /* Animations pour les produits */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -280,7 +655,7 @@
             font-weight: bold;
         }
         
-        /* ===== BOUTONS TOUCH FRIENDLY ===== */
+        /* ===== BOUTONS ===== */
         .btn-commander {
             display: inline-block;
             background: var(--gold);
@@ -312,7 +687,7 @@
             transform: translateY(-2px);
         }
         
-        /* ===== ATELIER RESPONSIVE ===== */
+        /* ===== ATELIER ===== */
         .atelier {
             padding: 50px 0;
             background: var(--beige);
@@ -344,7 +719,7 @@
             align-items: flex-start;
         }
         
-        /* ===== FORMULAIRE MOBILE ===== */
+        /* ===== FORMULAIRE ===== */
         .section-commande {
             background: var(--noir);
             color: white;
@@ -405,7 +780,7 @@
             padding-right: 50px;
         }
         
-        /* ===== CONTACT RESPONSIVE ===== */
+        /* ===== CONTACT ===== */
         .contact {
             text-align: center;
             padding: 50px var(--padding-mobile);
@@ -440,7 +815,7 @@
             outline: none;
         }
         
-        /* ===== FOOTER MOBILE ===== */
+        /* ===== FOOTER ===== */
         footer {
             text-align: center;
             padding: 30px var(--padding-mobile);
@@ -460,7 +835,7 @@
             outline-offset: 2px;
         }
         
-        /* ===== VALIDATION FORMULAIRE ===== */
+        /* ===== VALIDATION ===== */
         input:invalid,
         select:invalid,
         textarea:invalid {
@@ -473,9 +848,7 @@
             border-color: #4CAF50;
         }
         
-        /* ===== MEDIA QUERIES PROGRESSIVES ===== */
-        
-        /* Tablettes (à partir de 600px) */
+        /* ===== RESPONSIVE ===== */
         @media screen and (min-width: 600px) {
             .container {
                 padding: 0 24px;
@@ -522,7 +895,6 @@
             }
         }
         
-        /* Desktop (à partir de 900px) */
         @media screen and (min-width: 900px) {
             .container {
                 padding: 0 var(--padding-desktop);
@@ -596,16 +968,8 @@
             footer {
                 padding: 40px var(--padding-desktop);
             }
-            
-            .btn-modifier {
-                top: 30px;
-                right: 30px;
-                padding: 12px 20px;
-                font-size: 1rem;
-            }
         }
         
-        /* Grands écrans (à partir de 1200px) */
         @media screen and (min-width: 1200px) {
             .hero h1 {
                 font-size: 4rem;
@@ -621,7 +985,6 @@
             display: none; 
         }
         
-        /* Désactiver l'effet actif sur mobile */
         @media (hover: none) and (pointer: coarse) {
             .btn-commander:hover,
             .contact-link:hover,
@@ -634,7 +997,6 @@
             }
         }
         
-        /* Correction Safari iOS */
         @media screen and (max-width: 767px) {
             input,
             select,
@@ -645,17 +1007,10 @@
         }
     </style>
     
-    <!-- Polices et icônes -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Bouton Modifier en haut à droite -->
-    <a href="modifier.html" class="btn-modifier" aria-label="Modifier le site">
-        <i class="fas fa-edit"></i>
-        <span>Modifier le site</span>
-    </a>
-    
     <!-- Header -->
     <header>
         <div class="container">
@@ -674,8 +1029,8 @@
     <!-- Hero -->
     <section class="hero" aria-label="Présentation de la marque">
         <div class="container">
-            <h1>L'Artisanat au Service de l'Élégance</h1>
-            <p>Chaque sac est une pièce unique, réalisée sur mesure dans notre atelier parisien avec des cuirs d'exception sélectionnés chez les meilleurs tanneurs français.</p>
+            <h1>${titrePrincipal}</h1>
+            <p>${texteHero}</p>
         </div>
     </section>
 
@@ -684,64 +1039,55 @@
         <h2 class="produits-titre" id="produits">Nos Créations</h2>
         
         <div class="grid-produits">
-            <!-- Produit 1 - Classique Noir -->
-            <article class="produit" aria-label="Sac Classique Noir">
-                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                     alt="Sac Classique Noir en cuir pleine fleur français avec fermoir doré 24 carats"
+            <!-- Produit 1 -->
+            <article class="produit" aria-label="${produit1.nom}">
+                <img src="${produit1.image}" 
+                     alt="${produit1.nom}"
                      width="800" 
                      height="400"
                      loading="lazy"
                      class="produit-image">
                 <div class="produit-info">
-                    <h3 class="produit-nom">Classique Noir</h3>
-                    <p class="produit-description">
-                        Sac main en cuir pleine fleur français, tannage végétal. 
-                        Fermoir doré 24 carats, doublure soie naturelle, finitions main.
-                    </p>
-                    <div class="produit-prix" aria-label="Prix: 290 euros">290€</div>
-                    <a href="#commande" class="btn-commander" aria-label="Commander le modèle Classique Noir">
+                    <h3 class="produit-nom">${produit1.nom}</h3>
+                    <p class="produit-description">${produit1.description}</p>
+                    <div class="produit-prix" aria-label="Prix: ${produit1.prix} euros">${produit1.prix}€</div>
+                    <a href="#commande" class="btn-commander" aria-label="Commander le modèle ${produit1.nom}">
                         Commander ce modèle
                     </a>
                 </div>
             </article>
 
-            <!-- Produit 2 - Cabas Camel -->
-            <article class="produit" aria-label="Cabas Camel">
-                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                     alt="Cabas Camel en cuir veg-tan italien avec intérieur organisé et poches zippées"
+            <!-- Produit 2 -->
+            <article class="produit" aria-label="${produit2.nom}">
+                <img src="${produit2.image}" 
+                     alt="${produit2.nom}"
                      width="800" 
                      height="400"
                      loading="lazy"
                      class="produit-image">
                 <div class="produit-info">
-                    <h3 class="produit-nom">Cabas Camel</h3>
-                    <p class="produit-description">
-                        Cabas souple en cuir veg-tan italien, vieillissement naturel magnifique. 
-                        Intérieur organisé avec poches zippées.
-                    </p>
-                    <div class="produit-prix" aria-label="Prix: 340 euros">340€</div>
-                    <a href="#commande" class="btn-commander" aria-label="Commander le modèle Cabas Camel">
+                    <h3 class="produit-nom">${produit2.nom}</h3>
+                    <p class="produit-description">${produit2.description}</p>
+                    <div class="produit-prix" aria-label="Prix: ${produit2.prix} euros">${produit2.prix}€</div>
+                    <a href="#commande" class="btn-commander" aria-label="Commander le modèle ${produit2.nom}">
                         Commander ce modèle
                     </a>
                 </div>
             </article>
 
-            <!-- Produit 3 - Pochette Minuit -->
-            <article class="produit" aria-label="Pochette Minuit">
-                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                     alt="Pochette Minuit soirée en cuir grainé français avec chaîne dorée détachable"
+            <!-- Produit 3 -->
+            <article class="produit" aria-label="${produit3.nom}">
+                <img src="${produit3.image}" 
+                     alt="${produit3.nom}"
                      width="800" 
                      height="400"
                      loading="lazy"
                      class="produit-image">
                 <div class="produit-info">
-                    <h3 class="produit-nom">Pochette Minuit</h3>
-                    <p class="produit-description">
-                        Pochette soirée en cuir grainé français, chaîne dorée détachable. 
-                        Parfaite pour vos soirées les plus élégantes.
-                    </p>
-                    <div class="produit-prix" aria-label="Prix: 210 euros">210€</div>
-                    <a href="#commande" class="btn-commander" aria-label="Commander le modèle Pochette Minuit">
+                    <h3 class="produit-nom">${produit3.nom}</h3>
+                    <p class="produit-description">${produit3.description}</p>
+                    <div class="produit-prix" aria-label="Prix: ${produit3.prix} euros">${produit3.prix}€</div>
+                    <a href="#commande" class="btn-commander" aria-label="Commander le modèle ${produit3.nom}">
                         Commander ce modèle
                     </a>
                 </div>
@@ -753,12 +1099,12 @@
     <section class="atelier" id="atelier" aria-label="Présentation de notre atelier">
         <div class="container">
             <h2 style="text-align: center; font-size: 2rem; margin-bottom: 30px; color: var(--noir);">
-                Notre Atelier Parisien
+                ${atelier.titre}
             </h2>
             <div class="atelier-content">
                 <div style="width: 100%;">
-                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Atelier de maroquinerie traditionnelle à Paris avec outils et cuirs"
+                    <img src="${atelier.image}" 
+                         alt="${atelier.titre}"
                          width="800"
                          height="400"
                          loading="lazy"
@@ -766,12 +1112,10 @@
                 </div>
                 <div style="width: 100%;">
                     <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--gold);">
-                        Savoir-faire Artisanal
+                        ${atelier.soustitre}
                     </h3>
                     <p style="margin-bottom: 20px; line-height: 1.6; font-size: 1rem;">
-                        Situé au cœur de Paris, notre atelier perpétue un savoir-faire traditionnel 
-                        transmis depuis trois générations. Chaque sac est conçu, coupé et assemblé 
-                        à la main par nos artisans.
+                        ${atelier.description}
                     </p>
                     <ul class="atelier-list">
                         <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
@@ -833,9 +1177,9 @@
                         <label for="modele">Modèle choisi *</label>
                         <select id="modele" name="modele" required aria-required="true">
                             <option value="">Sélectionnez un modèle</option>
-                            <option value="classique-noir">Classique Noir - 290€</option>
-                            <option value="cabas-camel">Cabas Camel - 340€</option>
-                            <option value="pochette-minuit">Pochette Minuit - 210€</option>
+                            <option value="classique-noir">${produit1.nom} - ${produit1.prix}€</option>
+                            <option value="cabas-camel">${produit2.nom} - ${produit2.prix}€</option>
+                            <option value="pochette-minuit">${produit3.nom} - ${produit3.prix}€</option>
                             <option value="sur-mesure">Création sur mesure</option>
                         </select>
                     </div>
@@ -883,17 +1227,17 @@
             </p>
             
             <div class="contact-links">
-                <a href="https://wa.me/33612345678" class="contact-link">
+                <a href="https://wa.me/${contact.whatsapp.replace(/[^0-9+]/g, '')}" class="contact-link">
                     <i class="fab fa-whatsapp" aria-hidden="true"></i> 
-                    <span>WhatsApp: +33 6 12 34 56 78</span>
+                    <span>WhatsApp: ${contact.whatsapp}</span>
                 </a>
-                <a href="https://instagram.com/maisonmaroquinerie" class="contact-link">
+                <a href="https://instagram.com/${contact.instagram.replace('@', '')}" class="contact-link">
                     <i class="fab fa-instagram" aria-hidden="true"></i> 
-                    <span>@maisonmaroquinerie</span>
+                    <span>${contact.instagram}</span>
                 </a>
-                <a href="mailto:contact@maison-maroquinerie.com" class="contact-link">
+                <a href="mailto:${contact.email}" class="contact-link">
                     <i class="fas fa-envelope" aria-hidden="true"></i> 
-                    <span>contact@maison-maroquinerie.com</span>
+                    <span>${contact.email}</span>
                 </a>
             </div>
         </div>
@@ -918,26 +1262,20 @@
             // Navigation smooth
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
-                    if(this.getAttribute('href') !== '#') {
-                        e.preventDefault();
-                        const targetId = this.getAttribute('href');
-                        const targetElement = document.querySelector(targetId);
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
                         
-                        if (targetElement) {
-                            const headerHeight = document.querySelector('header').offsetHeight;
-                            const targetPosition = targetElement.offsetTop - headerHeight;
-                            
-                            window.scrollTo({
-                                top: targetPosition,
-                                behavior: 'smooth'
-                            });
-                            
-                            history.pushState(null, null, targetId);
-                            
-                            // Ajouter une classe active
-                            document.querySelectorAll('nav a').forEach(l => l.classList.remove('active'));
-                            this.classList.add('active');
-                        }
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        history.pushState(null, null, targetId);
                     }
                 });
             });
@@ -973,22 +1311,17 @@
                 form.addEventListener('submit', function(e) {
                     const requiredFields = form.querySelectorAll('[required]');
                     let isValid = true;
-                    let firstInvalidField = null;
                     
                     requiredFields.forEach(field => {
                         if (!field.value.trim()) {
                             field.style.borderColor = '#ff6b6b';
                             isValid = false;
-                            if (!firstInvalidField) firstInvalidField = field;
-                        } else {
-                            field.style.borderColor = '#444';
                         }
                     });
                     
                     if (!isValid) {
                         e.preventDefault();
                         alert('Veuillez remplir tous les champs obligatoires (*)');
-                        if (firstInvalidField) firstInvalidField.focus();
                         return false;
                     }
                     
@@ -1009,7 +1342,7 @@
                 });
             }
             
-            // Animation pour les produits
+            // Animation pour mobile
             if ('IntersectionObserver' in window) {
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
@@ -1018,57 +1351,67 @@
                             entry.target.style.transform = 'translateY(0)';
                         }
                     });
-                }, { 
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -50px 0px'
-                });
+                }, { threshold: 0.1 });
                 
                 document.querySelectorAll('.produit').forEach(el => observer.observe(el));
             }
-            
-            // Gestion du bouton modifier sur mobile
-            const btnModifier = document.querySelector('.btn-modifier');
-            if (window.innerWidth < 768) {
-                btnModifier.innerHTML = '<i class="fas fa-edit"></i>';
-                btnModifier.querySelector('span').style.display = 'none';
-            }
-            
-            // Cacher le bouton modifier au scroll sur mobile
-            let lastScroll = 0;
-            window.addEventListener('scroll', function() {
-                const currentScroll = window.pageYOffset;
-                
-                if (currentScroll > lastScroll && currentScroll > 100) {
-                    // Scroll vers le bas
-                    btnModifier.style.opacity = '0.5';
-                    btnModifier.style.transform = 'translateY(-10px)';
-                } else {
-                    // Scroll vers le haut
-                    btnModifier.style.opacity = '1';
-                    btnModifier.style.transform = 'translateY(0)';
-                }
-                
-                lastScroll = currentScroll;
-            });
-            
-            // Message de bienvenue
-            console.log('Bienvenue sur Maison de Maroquinerie !');
-            console.log('Pour modifier le site, cliquez sur le bouton "Modifier" en haut à droite.');
         });
+    </script>
+</body>
+</html>`;
+            
+            // Afficher le code généré
+            document.getElementById('codeFinal').value = codeHTML;
+            document.getElementById('apercuSection').style.display = 'block';
+            
+            // Scroll vers le résultat
+            document.getElementById('apercuSection').scrollIntoView({ behavior: 'smooth' });
+        }
         
-        // Gérer le chargement avec ancres
-        window.addEventListener('load', function() {
-            if (window.location.hash) {
-                const target = document.querySelector(window.location.hash);
-                if (target) {
-                    setTimeout(() => {
-                        const headerHeight = document.querySelector('header').offsetHeight;
-                        const targetPosition = target.offsetTop - headerHeight;
-                        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-                    }, 100);
-                }
-            }
+        // Fonction pour copier le code
+        function copierCode() {
+            const codeTextarea = document.getElementById('codeFinal');
+            codeTextarea.select();
+            codeTextarea.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(codeTextarea.value);
+            
+            // Afficher confirmation
+            const confirmation = document.getElementById('confirmationCopie');
+            confirmation.style.display = 'block';
+            setTimeout(() => {
+                confirmation.style.display = 'none';
+            }, 3000);
+        }
+        
+        // Charger les valeurs par défaut au démarrage
+        document.addEventListener('DOMContentLoaded', function() {
+            // Vous pouvez ajouter du code de préchargement ici si nécessaire
         });
+    </script>
+</body>
+</html>`;
+            
+            // Afficher le code
+            document.getElementById('codeFinal').value = codeHTML;
+            document.getElementById('apercuSection').style.display = 'block';
+            
+            // Scroll vers le résultat
+            document.getElementById('apercuSection').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Fonction pour copier le code
+        function copierCode() {
+            const codeTextarea = document.getElementById('codeFinal');
+            codeTextarea.select();
+            document.execCommand('copy');
+            
+            // Afficher confirmation
+            const confirmation = document.getElementById('confirmationCopie');
+            confirmation.style.display = 'block';
+            setTimeout(() => {
+                confirmation.style.display = 'none';
+            }, 3000);
+        }
     </script>
 </body>
 </html>
