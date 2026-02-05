@@ -2,33 +2,27 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    
-    <!-- SEO Optimisé -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maison de Maroquinerie - Sacs à Main Artisanaux de Luxe</title>
     <meta name="description" content="Sacs à main artisanaux de luxe fabriqués en France. Maroquinerie sur mesure avec cuirs d'exception sélectionnés chez les meilleurs tanneurs français.">
-    <meta name="keywords" content="sac à main, maroquinerie, cuir français, artisanat, luxe, sur mesure, sac artisanal, fabrication française, maroquinerie paris">
+    <meta name="keywords" content="sac à main, maroquinerie, cuir français, artisanat, luxe, sur mesure, sac artisanal">
     <meta name="author" content="Maison de Maroquinerie">
-    <meta name="robots" content="index, follow">
     
-    <!-- Open Graph pour réseaux sociaux -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Maison de Maroquinerie - Sacs à Main Artisanaux de Luxe">
     <meta property="og:description" content="Chaque sac est une pièce unique, réalisée sur mesure dans notre atelier parisien avec des cuirs d'exception">
     <meta property="og:image" content="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
     <meta property="og:url" content="https://maison-maroquinerie.netlify.app">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="fr_FR">
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Maison de Maroquinerie - Sacs à Main Artisanaux">
     <meta name="twitter:description" content="Maroquinerie de luxe fabriquée à la main en France">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👜</text></svg>">
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👜</text></svg>">
-    <meta name="theme-color" content="#F7F3EB">
     
     <style>
         :root {
@@ -36,23 +30,18 @@
             --noir: #1A1A1A;
             --beige: #F7F3EB;
             --texte: #333333;
-            --padding-mobile: 16px;
-            --padding-desktop: 20px;
         }
         
-        /* Reset amélioré pour mobile */
         * { 
             margin: 0; 
             padding: 0; 
             box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
         }
         
         html {
             font-size: 16px;
             scroll-behavior: smooth;
             scroll-padding-top: 80px;
-            -webkit-text-size-adjust: 100%;
         }
         
         body {
@@ -61,19 +50,16 @@
             color: var(--texte);
             line-height: 1.6;
             overflow-x: hidden;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
         
         .container { 
             max-width: 1200px; 
             margin: 0 auto; 
-            padding: 0 var(--padding-mobile);
+            padding: 0 20px;
             width: 100%;
         }
         
-        /* ===== HEADER MOBILE FIRST ===== */
+        /* ===== HEADER ===== */
         header {
             padding: 20px 0;
             text-align: center;
@@ -82,40 +68,29 @@
             top: 0;
             background: var(--beige);
             z-index: 1000;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
         }
         
         .logo {
-            font-size: 1.8rem;
+            font-size: 2rem;
             letter-spacing: 2px;
             color: var(--noir);
-            margin-bottom: 8px;
-            line-height: 1.2;
+            margin-bottom: 5px;
             font-weight: 500;
         }
         
         .sous-titre {
             font-style: italic;
             color: var(--gold);
-            font-size: 0.9rem;
+            font-size: 1rem;
             margin-bottom: 15px;
         }
         
-        /* Navigation optimisée mobile */
         nav {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
             margin-top: 15px;
             flex-wrap: wrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            padding-bottom: 5px;
-        }
-        
-        nav::-webkit-scrollbar {
-            display: none;
         }
         
         nav a {
@@ -123,28 +98,18 @@
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             padding: 8px 12px;
-            border-radius: 4px;
-            transition: all 0.3s;
-            white-space: nowrap;
-            min-height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid transparent;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
         }
         
-        nav a:hover,
-        nav a:focus,
-        nav a.active {
+        nav a:hover {
             border-color: var(--gold);
-            background: rgba(197, 165, 114, 0.1);
-            outline: none;
         }
         
-        /* Bouton modifier en haut à droite */
-        .btn-modifier {
+        /* ===== BOUTON ADMIN ===== */
+        .btn-admin {
             position: fixed;
             top: 20px;
             right: 20px;
@@ -153,81 +118,53 @@
             color: white;
             padding: 10px 15px;
             border-radius: 5px;
-            text-decoration: none;
+            border: none;
+            cursor: pointer;
             font-size: 0.9rem;
             display: flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: all 0.3s;
         }
         
-        .btn-modifier:hover {
-            background: #B08A5D;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        
-        /* ===== HERO RESPONSIVE ===== */
+        /* ===== HERO ===== */
         .hero {
             background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)),
                         url('https://images.unsplash.com/photo-1591561954557-26941169b49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             color: white;
-            padding: 60px var(--padding-mobile);
+            padding: 80px 20px;
             text-align: center;
-            margin: 20px 0;
-            border-radius: 0;
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin: 40px 0;
         }
         
         .hero h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
             font-weight: 300;
-            line-height: 1.3;
         }
         
         .hero p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             max-width: 600px;
             margin: 0 auto 30px;
             color: var(--beige);
-            line-height: 1.6;
         }
         
-        /* ===== PRODUITS RESPONSIVE ===== */
+        /* ===== PRODUITS ===== */
         .produits-titre {
             text-align: center;
-            font-size: 2rem;
-            margin: 40px 0 30px;
+            font-size: 2.5rem;
+            margin: 60px 0 40px;
             color: var(--noir);
             font-weight: 300;
-            padding: 0 10px;
         }
         
         .grid-produits {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-bottom: 60px;
-        }
-        
-        /* Animations pour les produits */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
         
         .produit {
@@ -235,14 +172,7 @@
             transition: transform 0.3s, box-shadow 0.3s;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            animation: fadeInUp 0.6s ease-out;
-            animation-fill-mode: both;
         }
-        
-        .produit:nth-child(1) { animation-delay: 0.1s; }
-        .produit:nth-child(2) { animation-delay: 0.2s; }
-        .produit:nth-child(3) { animation-delay: 0.3s; }
         
         .produit:hover {
             transform: translateY(-10px);
@@ -257,11 +187,11 @@
         }
         
         .produit-info {
-            padding: 20px;
+            padding: 25px;
         }
         
         .produit-nom {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             margin-bottom: 10px;
             color: var(--noir);
         }
@@ -269,379 +199,201 @@
         .produit-description {
             color: #666;
             margin-bottom: 15px;
-            line-height: 1.6;
-            font-size: 0.95rem;
         }
         
         .produit-prix {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: var(--gold);
-            margin: 15px 0;
+            margin: 20px 0;
             font-weight: bold;
         }
         
-        /* ===== BOUTONS TOUCH FRIENDLY ===== */
+        /* ===== BOUTONS ===== */
         .btn-commander {
             display: inline-block;
             background: var(--gold);
             color: white;
-            padding: 16px 24px;
+            padding: 15px 30px;
             text-decoration: none;
             border: none;
             font-size: 1rem;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: background 0.3s;
             width: 100%;
             text-align: center;
             text-transform: uppercase;
             letter-spacing: 1px;
-            min-height: 52px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             border-radius: 4px;
-            font-weight: 500;
-            touch-action: manipulation;
         }
         
-        .btn-commander:hover,
-        .btn-commander:focus {
+        .btn-commander:hover {
             background: #B08A5D;
-            outline: 3px solid rgba(197, 165, 114, 0.3);
-            outline-offset: 2px;
-            transform: translateY(-2px);
         }
         
-        /* ===== ATELIER RESPONSIVE ===== */
+        /* ===== ATELIER ===== */
         .atelier {
-            padding: 50px 0;
+            padding: 60px 0;
             background: var(--beige);
         }
         
         .atelier-content {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
             align-items: center;
         }
         
         .atelier-image {
             width: 100%;
-            height: 250px;
+            height: 300px;
             object-fit: cover;
             border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
         
         .atelier-list {
             list-style: none;
-            padding-left: 0;
+            padding: 0;
+            margin: 20px 0;
         }
         
         .atelier-list li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
         }
         
-        /* ===== FORMULAIRE MOBILE ===== */
+        /* ===== FORMULAIRE ===== */
         .section-commande {
             background: var(--noir);
             color: white;
-            padding: 50px var(--padding-mobile);
+            padding: 60px 20px;
             margin: 40px 0;
         }
         
         .form-container {
-            max-width: 100%;
+            max-width: 600px;
             margin: 0 auto;
         }
         
         .form-titre {
-            font-size: 1.8rem;
-            margin-bottom: 25px;
+            font-size: 2rem;
+            margin-bottom: 30px;
             text-align: center;
             color: var(--gold);
         }
         
         .netlify-form {
             display: grid;
-            gap: 18px;
+            gap: 20px;
         }
         
         .form-group label {
             display: block;
             margin-bottom: 8px;
             color: var(--beige);
-            font-size: 0.95rem;
         }
         
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 16px;
-            border: 2px solid #444;
+            padding: 12px;
+            border: 1px solid #444;
             background: rgba(255, 255, 255, 0.1);
             color: white;
             font-family: inherit;
-            font-size: 16px;
-            border-radius: 6px;
-            -webkit-appearance: none;
-            appearance: none;
+            border-radius: 4px;
         }
         
         .form-group textarea {
             height: 120px;
             resize: vertical;
-            min-height: 100px;
         }
         
-        select {
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
-            background-repeat: no-repeat;
-            background-position: right 16px center;
-            background-size: 20px;
-            padding-right: 50px;
-        }
-        
-        /* ===== CONTACT RESPONSIVE ===== */
+        /* ===== CONTACT ===== */
         .contact {
             text-align: center;
-            padding: 50px var(--padding-mobile);
+            padding: 60px 20px;
         }
         
         .contact-links {
             display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-top: 25px;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
         }
         
         .contact-link {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             color: var(--gold);
             text-decoration: none;
-            font-size: 1rem;
-            padding: 12px;
-            border: 1px solid rgba(197, 165, 114, 0.3);
-            border-radius: 8px;
-            transition: all 0.3s;
-            justify-content: center;
-            min-height: 52px;
+            font-size: 1.1rem;
         }
         
-        .contact-link:hover,
-        .contact-link:focus {
-            background: rgba(197, 165, 114, 0.1);
-            transform: translateY(-2px);
-            outline: none;
-        }
-        
-        /* ===== FOOTER MOBILE ===== */
+        /* ===== FOOTER ===== */
         footer {
             text-align: center;
-            padding: 30px var(--padding-mobile);
+            padding: 40px 20px;
             border-top: 1px solid rgba(197, 165, 114, 0.3);
             color: #666;
-            font-size: 0.85rem;
-            margin-top: auto;
+            font-size: 0.9rem;
         }
         
-        /* ===== FOCUS STATES ===== */
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .grid-produits {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            nav {
+                gap: 10px;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .atelier-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .atelier-image {
+                height: 250px;
+            }
+            
+            .btn-admin {
+                top: 10px;
+                right: 10px;
+                padding: 8px 12px;
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* ===== UTILITAIRES ===== */
+        .hidden {
+            display: none;
+        }
+        
+        /* Focus pour accessibilité */
         a:focus,
         button:focus,
         input:focus,
         select:focus,
         textarea:focus {
-            outline: 3px solid var(--gold);
+            outline: 2px solid var(--gold);
             outline-offset: 2px;
-        }
-        
-        /* ===== VALIDATION FORMULAIRE ===== */
-        input:invalid,
-        select:invalid,
-        textarea:invalid {
-            border-color: #ff6b6b;
-        }
-        
-        input:valid,
-        select:valid,
-        textarea:valid {
-            border-color: #4CAF50;
-        }
-        
-        /* ===== MEDIA QUERIES PROGRESSIVES ===== */
-        
-        /* Tablettes (à partir de 600px) */
-        @media screen and (min-width: 600px) {
-            .container {
-                padding: 0 24px;
-            }
-            
-            .logo {
-                font-size: 2.2rem;
-            }
-            
-            .hero {
-                padding: 80px 24px;
-                min-height: 70vh;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .grid-produits {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
-            
-            .atelier-content {
-                flex-direction: row;
-                gap: 40px;
-            }
-            
-            .atelier-image {
-                height: 350px;
-                flex: 1;
-            }
-            
-            .contact-links {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .contact-link {
-                flex: 1;
-                min-width: 200px;
-                max-width: 300px;
-            }
-        }
-        
-        /* Desktop (à partir de 900px) */
-        @media screen and (min-width: 900px) {
-            .container {
-                padding: 0 var(--padding-desktop);
-            }
-            
-            .logo {
-                font-size: 2.8rem;
-                letter-spacing: 4px;
-            }
-            
-            .sous-titre {
-                font-size: 1.1rem;
-            }
-            
-            nav {
-                gap: 30px;
-            }
-            
-            nav a {
-                font-size: 0.9rem;
-                padding: 10px 0;
-            }
-            
-            .hero {
-                padding: 100px var(--padding-desktop);
-                margin: 40px 0;
-                border-radius: 12px;
-                min-height: 80vh;
-            }
-            
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            .produits-titre {
-                font-size: 2.5rem;
-                margin: 60px 0 40px;
-            }
-            
-            .grid-produits {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 40px;
-            }
-            
-            .produit-image {
-                height: 400px;
-            }
-            
-            .section-commande {
-                padding: 80px var(--padding-desktop);
-                margin: 60px 0;
-                border-radius: 12px;
-            }
-            
-            .form-titre {
-                font-size: 2rem;
-            }
-            
-            .form-container {
-                max-width: 600px;
-            }
-            
-            .contact {
-                padding: 60px var(--padding-desktop);
-            }
-            
-            footer {
-                padding: 40px var(--padding-desktop);
-            }
-            
-            .btn-modifier {
-                top: 30px;
-                right: 30px;
-                padding: 12px 20px;
-                font-size: 1rem;
-            }
-        }
-        
-        /* Grands écrans (à partir de 1200px) */
-        @media screen and (min-width: 1200px) {
-            .hero h1 {
-                font-size: 4rem;
-            }
-            
-            .grid-produits {
-                gap: 50px;
-            }
-        }
-        
-        /* ===== UTILITAIRES ===== */
-        .hidden { 
-            display: none; 
-        }
-        
-        /* Désactiver l'effet actif sur mobile */
-        @media (hover: none) and (pointer: coarse) {
-            .btn-commander:hover,
-            .contact-link:hover,
-            .produit:hover {
-                transform: none;
-            }
-            
-            .produit:hover {
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            }
-        }
-        
-        /* Correction Safari iOS */
-        @media screen and (max-width: 767px) {
-            input,
-            select,
-            textarea,
-            button {
-                font-size: 16px !important;
-            }
         }
     </style>
     
@@ -650,29 +402,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Bouton Modifier en haut à droite -->
-    <a href="modifier.html" class="btn-modifier" aria-label="Modifier le site">
-        <i class="fas fa-edit"></i>
-        <span>Modifier le site</span>
-    </a>
+    <!-- Bouton Admin -->
+    <button class="btn-admin" onclick="demanderMotDePasse()">
+        <i class="fas fa-lock"></i> Admin
+    </button>
     
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="logo" aria-label="Maison de Maroquinerie">MAISON DE MAROQUINERIE</div>
-            <p class="sous-titre" aria-label="Sacs à main artisanaux depuis 2024">Sacs à main artisanaux depuis 2024</p>
+            <div class="logo">MAISON DE MAROQUINERIE</div>
+            <p class="sous-titre">Sacs à main artisanaux depuis 2024</p>
             
-            <nav aria-label="Navigation principale">
-                <a href="#produits" aria-label="Voir nos collections de sacs">Collections</a>
-                <a href="#commande" aria-label="Passer une commande sur mesure">Commande</a>
-                <a href="#contact" aria-label="Nous contacter">Contact</a>
-                <a href="#atelier" aria-label="Découvrir notre atelier parisien">L'Atelier</a>
+            <nav>
+                <a href="#produits">Collections</a>
+                <a href="#commande">Commande</a>
+                <a href="#contact">Contact</a>
+                <a href="#atelier">L'Atelier</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero -->
-    <section class="hero" aria-label="Présentation de la marque">
+    <section class="hero">
         <div class="container">
             <h1>L'Artisanat au Service de l'Élégance</h1>
             <p>Chaque sac est une pièce unique, réalisée sur mesure dans notre atelier parisien avec des cuirs d'exception sélectionnés chez les meilleurs tanneurs français.</p>
@@ -684,10 +435,10 @@
         <h2 class="produits-titre" id="produits">Nos Créations</h2>
         
         <div class="grid-produits">
-            <!-- Produit 1 - Classique Noir -->
-            <article class="produit" aria-label="Sac Classique Noir">
+            <!-- Produit 1 -->
+            <article class="produit">
                 <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                     alt="Sac Classique Noir en cuir pleine fleur français avec fermoir doré 24 carats"
+                     alt="Sac Classique Noir en cuir pleine fleur français"
                      width="800" 
                      height="400"
                      loading="lazy"
@@ -696,19 +447,17 @@
                     <h3 class="produit-nom">Classique Noir</h3>
                     <p class="produit-description">
                         Sac main en cuir pleine fleur français, tannage végétal. 
-                        Fermoir doré 24 carats, doublure soie naturelle, finitions main.
+                        Fermoir doré 24 carats, doublure soie naturelle.
                     </p>
-                    <div class="produit-prix" aria-label="Prix: 290 euros">290€</div>
-                    <a href="#commande" class="btn-commander" aria-label="Commander le modèle Classique Noir">
-                        Commander ce modèle
-                    </a>
+                    <div class="produit-prix">290€</div>
+                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
                 </div>
             </article>
 
-            <!-- Produit 2 - Cabas Camel -->
-            <article class="produit" aria-label="Cabas Camel">
+            <!-- Produit 2 -->
+            <article class="produit">
                 <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                     alt="Cabas Camel en cuir veg-tan italien avec intérieur organisé et poches zippées"
+                     alt="Cabas Camel en cuir italien"
                      width="800" 
                      height="400"
                      loading="lazy"
@@ -719,17 +468,15 @@
                         Cabas souple en cuir veg-tan italien, vieillissement naturel magnifique. 
                         Intérieur organisé avec poches zippées.
                     </p>
-                    <div class="produit-prix" aria-label="Prix: 340 euros">340€</div>
-                    <a href="#commande" class="btn-commander" aria-label="Commander le modèle Cabas Camel">
-                        Commander ce modèle
-                    </a>
+                    <div class="produit-prix">340€</div>
+                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
                 </div>
             </article>
 
-            <!-- Produit 3 - Pochette Minuit -->
-            <article class="produit" aria-label="Pochette Minuit">
+            <!-- Produit 3 -->
+            <article class="produit">
                 <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                     alt="Pochette Minuit soirée en cuir grainé français avec chaîne dorée détachable"
+                     alt="Pochette Minuit soirée en cuir français"
                      width="800" 
                      height="400"
                      loading="lazy"
@@ -740,58 +487,56 @@
                         Pochette soirée en cuir grainé français, chaîne dorée détachable. 
                         Parfaite pour vos soirées les plus élégantes.
                     </p>
-                    <div class="produit-prix" aria-label="Prix: 210 euros">210€</div>
-                    <a href="#commande" class="btn-commander" aria-label="Commander le modèle Pochette Minuit">
-                        Commander ce modèle
-                    </a>
+                    <div class="produit-prix">210€</div>
+                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
                 </div>
             </article>
         </div>
     </div>
 
     <!-- Section Atelier -->
-    <section class="atelier" id="atelier" aria-label="Présentation de notre atelier">
+    <section class="atelier" id="atelier">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 30px; color: var(--noir);">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: var(--noir);">
                 Notre Atelier Parisien
             </h2>
             <div class="atelier-content">
-                <div style="width: 100%;">
+                <div>
                     <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Atelier de maroquinerie traditionnelle à Paris avec outils et cuirs"
+                         alt="Atelier de maroquinerie à Paris"
                          width="800"
                          height="400"
                          loading="lazy"
                          class="atelier-image">
                 </div>
-                <div style="width: 100%;">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--gold);">
+                <div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--gold);">
                         Savoir-faire Artisanal
                     </h3>
-                    <p style="margin-bottom: 20px; line-height: 1.6; font-size: 1rem;">
+                    <p style="margin-bottom: 20px;">
                         Situé au cœur de Paris, notre atelier perpétue un savoir-faire traditionnel 
                         transmis depuis trois générations. Chaque sac est conçu, coupé et assemblé 
                         à la main par nos artisans.
                     </p>
                     <ul class="atelier-list">
-                        <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
-                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px; margin-top: 3px; flex-shrink: 0;" aria-hidden="true"></i>
-                            <span style="font-size: 0.95rem;">Cuirs sélectionnés chez les tanneurs français</span>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i>
+                            Cuirs sélectionnés chez les tanneurs français
                         </li>
-                        <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
-                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px; margin-top: 3px; flex-shrink: 0;" aria-hidden="true"></i>
-                            <span style="font-size: 0.95rem;">Finition main avec plus de 100 étapes de fabrication</span>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i>
+                            Finition main avec plus de 100 étapes de fabrication
                         </li>
-                        <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
-                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px; margin-top: 3px; flex-shrink: 0;" aria-hidden="true"></i>
-                            <span style="font-size: 0.95rem;">Garantie à vie sur nos créations</span>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i>
+                            Garantie à vie sur nos créations
                         </li>
-                        <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
-                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px; margin-top: 3px; flex-shrink: 0;" aria-hidden="true"></i>
-                            <span style="font-size: 0.95rem;">Réparations et entretien offerts</span>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i>
+                            Réparations et entretien offerts
                         </li>
                     </ul>
-                    <p style="margin-top: 20px; font-style: italic; color: var(--gold); font-size: 0.9rem;">
+                    <p style="font-style: italic; color: var(--gold);">
                         Sur rendez-vous uniquement pour des conseils personnalisés.
                     </p>
                 </div>
@@ -799,39 +544,35 @@
         </div>
     </section>
 
-    <!-- Formulaire de Commande Netlify -->
-    <section class="section-commande" id="commande" aria-label="Formulaire de commande">
+    <!-- Formulaire de Commande -->
+    <section class="section-commande" id="commande">
         <div class="container">
             <div class="form-container">
                 <h2 class="form-titre">Commande sur Mesure</h2>
                 
-                <!-- FORMULAIRE NETLIFY -->
                 <form name="commande-sac" method="POST" netlify-honeypot="bot-field" data-netlify="true" class="netlify-form">
-                    <!-- Champ anti-spam caché -->
-                    <p class="hidden" aria-hidden="true">
-                        <label>Ne remplissez pas ce champ si vous êtes humain: <input name="bot-field" /></label>
+                    <p class="hidden">
+                        <label>Ne remplissez pas ce champ: <input name="bot-field" /></label>
                     </p>
                     
-                    <!-- Données client -->
                     <div class="form-group">
                         <label for="nom">Nom complet *</label>
-                        <input type="text" id="nom" name="nom" required aria-required="true">
+                        <input type="text" id="nom" name="nom" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required aria-required="true" inputmode="email">
+                        <input type="email" id="email" name="email" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="telephone">Téléphone</label>
-                        <input type="tel" id="telephone" name="telephone" inputmode="tel">
+                        <input type="tel" id="telephone" name="telephone">
                     </div>
                     
-                    <!-- Choix produit -->
                     <div class="form-group">
                         <label for="modele">Modèle choisi *</label>
-                        <select id="modele" name="modele" required aria-required="true">
+                        <select id="modele" name="modele" required>
                             <option value="">Sélectionnez un modèle</option>
                             <option value="classique-noir">Classique Noir - 290€</option>
                             <option value="cabas-camel">Cabas Camel - 340€</option>
@@ -840,34 +581,30 @@
                         </select>
                     </div>
                     
-                    <!-- Personnalisation -->
                     <div class="form-group">
-                        <label for="personnalisation">Personnalisations souhaitées</label>
+                        <label for="personnalisation">Personnalisations</label>
                         <textarea id="personnalisation" name="personnalisation" 
-                                  placeholder="Couleur spécifique, monogramme, dimensions particulières..."></textarea>
+                                  placeholder="Couleur, monogramme, dimensions..."></textarea>
                     </div>
                     
-                    <!-- Adresse -->
                     <div class="form-group">
                         <label for="adresse">Adresse de livraison *</label>
-                        <textarea id="adresse" name="adresse" required aria-required="true"
+                        <textarea id="adresse" name="adresse" required 
                                   placeholder="Nom, adresse, code postal, ville"></textarea>
                     </div>
                     
-                    <!-- Message -->
                     <div class="form-group">
                         <label for="message">Message additionnel</label>
                         <textarea id="message" name="message" 
-                                  placeholder="Date souhaitée, questions particulières..."></textarea>
+                                  placeholder="Date souhaitée, questions..."></textarea>
                     </div>
                     
-                    <!-- Bouton submit -->
                     <button type="submit" class="btn-commander">
                         <i class="fas fa-paper-plane"></i> Envoyer la demande
                     </button>
                     
-                    <p style="text-align: center; margin-top: 20px; font-size: 0.85rem; color: #aaa;">
-                        Nous vous contacterons sous 24h pour confirmer votre commande et les modalités de paiement.
+                    <p style="text-align: center; margin-top: 20px; color: #aaa; font-size: 0.9rem;">
+                        Nous vous contacterons sous 24h pour confirmer votre commande.
                     </p>
                 </form>
             </div>
@@ -875,196 +612,132 @@
     </section>
 
     <!-- Contact -->
-    <section class="contact" id="contact" aria-label="Informations de contact">
+    <section class="contact" id="contact">
         <div class="container">
-            <h2 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--noir);">Contact & Rendez-vous</h2>
-            <p style="max-width: 600px; margin: 0 auto 30px; font-size: 1rem;">
+            <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--noir);">Contact & Rendez-vous</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px;">
                 Pour une visite de l'atelier, un essai personnalisé ou toute question sur nos créations.
             </p>
             
             <div class="contact-links">
                 <a href="https://wa.me/33612345678" class="contact-link">
-                    <i class="fab fa-whatsapp" aria-hidden="true"></i> 
-                    <span>WhatsApp: +33 6 12 34 56 78</span>
+                    <i class="fab fa-whatsapp"></i> WhatsApp: +33 6 12 34 56 78
                 </a>
                 <a href="https://instagram.com/maisonmaroquinerie" class="contact-link">
-                    <i class="fab fa-instagram" aria-hidden="true"></i> 
-                    <span>@maisonmaroquinerie</span>
+                    <i class="fab fa-instagram"></i> @maisonmaroquinerie
                 </a>
                 <a href="mailto:contact@maison-maroquinerie.com" class="contact-link">
-                    <i class="fas fa-envelope" aria-hidden="true"></i> 
-                    <span>contact@maison-maroquinerie.com</span>
+                    <i class="fas fa-envelope"></i> contact@maison-maroquinerie.com
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer role="contentinfo">
+    <footer>
         <div class="container">
             <p>© 2024 Maison de Maroquinerie. Tous droits réservés.</p>
-            <p style="margin-top: 10px; font-size: 0.9rem;">
+            <p style="margin-top: 10px;">
                 Fabrication française • Livraison 10-15 jours • Retours acceptés sous 14 jours
             </p>
-            <p style="margin-top: 20px; font-size: 0.75rem; color: #888;">
-                Site hébergé sur Netlify • Formulaire sécurisé • SIRET: 123 456 789 00000
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #888;">
+                Site hébergé sur Netlify • Formulaire sécurisé
             </p>
         </div>
     </footer>
 
-    <!-- JavaScript optimisé -->
     <script>
+        // Fonction mot de passe
+        function demanderMotDePasse() {
+            const motDePasse = prompt('Entrez le mot de passe administrateur :');
+            
+            // MODIFIEZ CE MOT DE PASSE
+            const motDePasseCorrect = 'Maroquinerie2024';
+            
+            if (motDePasse === motDePasseCorrect) {
+                window.location.href = 'modifier.html';
+            } else if (motDePasse !== null) {
+                alert('Mot de passe incorrect');
+            }
+        }
+        
+        // Navigation smooth
         document.addEventListener('DOMContentLoaded', function() {
-            // Navigation smooth
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     if(this.getAttribute('href') !== '#') {
                         e.preventDefault();
-                        const targetId = this.getAttribute('href');
-                        const targetElement = document.querySelector(targetId);
-                        
-                        if (targetElement) {
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if(target) {
                             const headerHeight = document.querySelector('header').offsetHeight;
-                            const targetPosition = targetElement.offsetTop - headerHeight;
-                            
+                            const targetPosition = target.offsetTop - headerHeight;
                             window.scrollTo({
                                 top: targetPosition,
                                 behavior: 'smooth'
                             });
-                            
-                            history.pushState(null, null, targetId);
-                            
-                            // Ajouter une classe active
-                            document.querySelectorAll('nav a').forEach(l => l.classList.remove('active'));
-                            this.classList.add('active');
+                            history.pushState(null, null, this.getAttribute('href'));
                         }
                     }
                 });
             });
             
-            // Gestion du formulaire
+            // Gestion formulaire
             const form = document.querySelector('form[name="commande-sac"]');
-            if (form) {
-                // Sauvegarde automatique
-                const saveFormData = () => {
+            if(form) {
+                // Sauvegarde auto
+                const savedData = JSON.parse(localStorage.getItem('formData') || '{}');
+                Object.keys(savedData).forEach(key => {
+                    const field = form.elements[key];
+                    if(field) field.value = savedData[key];
+                });
+                
+                form.addEventListener('input', function() {
                     const formData = new FormData(form);
                     const data = {};
                     formData.forEach((value, key) => {
-                        if (key !== 'bot-field') data[key] = value;
+                        if(key !== 'bot-field') data[key] = value;
                     });
-                    localStorage.setItem('maroquinerieForm', JSON.stringify(data));
-                };
-                
-                // Charger données sauvegardées
-                const savedData = JSON.parse(localStorage.getItem('maroquinerieForm') || '{}');
-                Object.keys(savedData).forEach(key => {
-                    const field = form.querySelector(`[name="${key}"]`);
-                    if (field) field.value = savedData[key];
+                    localStorage.setItem('formData', JSON.stringify(data));
                 });
                 
-                // Sauvegarde en temps réel
-                let saveTimeout;
-                form.addEventListener('input', function() {
-                    clearTimeout(saveTimeout);
-                    saveTimeout = setTimeout(saveFormData, 500);
-                });
-                
-                // Validation
                 form.addEventListener('submit', function(e) {
-                    const requiredFields = form.querySelectorAll('[required]');
+                    const required = form.querySelectorAll('[required]');
                     let isValid = true;
-                    let firstInvalidField = null;
                     
-                    requiredFields.forEach(field => {
-                        if (!field.value.trim()) {
+                    required.forEach(field => {
+                        if(!field.value.trim()) {
                             field.style.borderColor = '#ff6b6b';
                             isValid = false;
-                            if (!firstInvalidField) firstInvalidField = field;
-                        } else {
-                            field.style.borderColor = '#444';
                         }
                     });
                     
-                    if (!isValid) {
+                    if(!isValid) {
                         e.preventDefault();
                         alert('Veuillez remplir tous les champs obligatoires (*)');
-                        if (firstInvalidField) firstInvalidField.focus();
-                        return false;
+                        return;
                     }
                     
-                    // Animation de soumission
-                    const submitBtn = form.querySelector('button[type="submit"]');
-                    const originalText = submitBtn.innerHTML;
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
-                    submitBtn.disabled = true;
+                    localStorage.removeItem('formData');
+                    const btn = form.querySelector('button[type="submit"]');
+                    const original = btn.innerHTML;
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi...';
+                    btn.disabled = true;
                     
-                    // Nettoyer après envoi
-                    localStorage.removeItem('maroquinerieForm');
-                    
-                    // Réinitialiser après 3 secondes
                     setTimeout(() => {
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.disabled = false;
+                        btn.innerHTML = original;
+                        btn.disabled = false;
                     }, 3000);
                 });
             }
-            
-            // Animation pour les produits
-            if ('IntersectionObserver' in window) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
-                        }
-                    });
-                }, { 
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -50px 0px'
-                });
-                
-                document.querySelectorAll('.produit').forEach(el => observer.observe(el));
-            }
-            
-            // Gestion du bouton modifier sur mobile
-            const btnModifier = document.querySelector('.btn-modifier');
-            if (window.innerWidth < 768) {
-                btnModifier.innerHTML = '<i class="fas fa-edit"></i>';
-                btnModifier.querySelector('span').style.display = 'none';
-            }
-            
-            // Cacher le bouton modifier au scroll sur mobile
-            let lastScroll = 0;
-            window.addEventListener('scroll', function() {
-                const currentScroll = window.pageYOffset;
-                
-                if (currentScroll > lastScroll && currentScroll > 100) {
-                    // Scroll vers le bas
-                    btnModifier.style.opacity = '0.5';
-                    btnModifier.style.transform = 'translateY(-10px)';
-                } else {
-                    // Scroll vers le haut
-                    btnModifier.style.opacity = '1';
-                    btnModifier.style.transform = 'translateY(0)';
-                }
-                
-                lastScroll = currentScroll;
-            });
-            
-            // Message de bienvenue
-            console.log('Bienvenue sur Maison de Maroquinerie !');
-            console.log('Pour modifier le site, cliquez sur le bouton "Modifier" en haut à droite.');
         });
         
-        // Gérer le chargement avec ancres
+        // Gérer ancres au chargement
         window.addEventListener('load', function() {
-            if (window.location.hash) {
+            if(window.location.hash) {
                 const target = document.querySelector(window.location.hash);
-                if (target) {
+                if(target) {
                     setTimeout(() => {
-                        const headerHeight = document.querySelector('header').offsetHeight;
-                        const targetPosition = target.offsetTop - headerHeight;
-                        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                        target.scrollIntoView({ behavior: 'smooth' });
                     }, 100);
                 }
             }
