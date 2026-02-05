@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <!-- SEO Optimisé -->
+    <title>Maison de Maroquinerie - Sacs à Main Artisanaux de Luxe</title>
+    <meta name="description" content="Sacs à main artisanaux de luxe fabriqués en France. Maroquinerie sur mesure avec cuirs d'exception sélectionnés chez les meilleurs tanneurs français.">
+    <meta name="keywords" content="sac à main, maroquinerie, cuir français, artisanat, luxe, sur mesure, sac artisanal, fabrication française, maroquinerie paris">
+    <meta name="author" content="Maison de Maroquinerie">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph pour réseaux sociaux -->
+    <meta property="og:title" content="Maison de Maroquinerie - Sacs à Main Artisanaux de Luxe">
+    <meta property="og:description" content="Chaque sac est une pièce unique, réalisée sur mesure dans notre atelier parisien avec des cuirs d'exception">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://maison-maroquinerie.netlify.app">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Maison de Maroquinerie - Sacs à Main Artisanaux">
+    <meta name="twitter:description" content="Maroquinerie de luxe fabriquée à la main en France">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👜</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👜</text></svg>">
+    <meta name="theme-color" content="#F7F3EB">
+    
+    <style>
+        :root {
+            --gold: #C5A572;
+            --noir: #1A1A1A;
+            --beige: #F7F3EB;
+            --texte: #333333;
+            --padding-mobile: 16px;
+            --padding-desktop: 20px;
+        }
+        
+        /* Reset amélioré pour mobile */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent; /* Retire le bleu au touch sur mobile */
+        }
+        
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* Pour la navigation fixe */
+            -webkit-text-size-adjust: 100%; /* Empêche le zoom texte sur iOS */
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: var(--beige);
+            color: var(--texte);
+            line-height: 1.6;
+            overflow-x: hidden; /* Empêche le scroll horizontal */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 var(--padding-mobile);
+            width: 100%;
+        }
+        
+        /* ===== HEADER MOBILE FIRST ===== */
+        header {
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(197, 165, 114, 0.3);
+            position: sticky;
+            top: 0;
+            background: var(--beige);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .logo {
+            font-size: 1.8rem; /* Plus petit sur mobile */
+            letter-spacing: 2px;
+            color: var(--noir);
+            margin-bottom: 8px;
+            line-height: 1.2;
+            font-weight: 500;
+        }
+        
+        .sous-titre {
+            font-style: italic;
+            color: var(--gold);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Navigation optimisée mobile */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            overflow-x: auto; /* Scroll horizontal si trop d'items */
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 5px;
+        }
+        
+        nav::-webkit-scrollbar {
+            display: none; /* Cache la scrollbar sur mobile */
+        }
+        
+        nav a {
+            color: var(--texte);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.8rem;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            white-space: nowrap; /* Empêche le retour à la ligne */
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid transparent;
+        }
+        
+        nav a:hover,
+        nav a:focus,
+        nav a.active {
+            border-color: var(--gold);
+            background: rgba(197, 165, 114, 0.1);
+            outline: none;
+        }
+        
+        /* ===== HERO RESPONSIVE ===== */
+        .hero {
+            background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)),
+                        url('https://images.unsplash.com/photo-1591561954557-26941169b49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Effet parallaxe sur desktop */
+            color: white;
+            padding: 60px var(--padding-mobile);
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 0;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+            line-height: 1.3;
+        }
+        
+        .hero p {
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: var(--beige);
+            line-height: 1.6;
+        }
+        
+        /* ===== PRODUITS RESPONSIVE ===== */
+        .produits-titre {
+            text-align: center;
+            font-size: 2rem;
+            margin: 40px 0 30px;
+            color: var(--noir);
+            font-weight: 300;
+            padding: 0 10px;
+        }
+        
+        .grid-produits {
+            display: grid;
+            grid-template-columns: 1fr; /* 1 colonne par défaut (mobile) */
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .produit {
+            background: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .produit-image {
+            width: 100%;
+            height: 300px; /* Plus court sur mobile */
+            object-fit: cover;
+            display: block;
+        }
+        
+        .produit-info {
+            padding: 20px;
+        }
+        
+        .produit-nom {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--noir);
+        }
+        
+        .produit-description {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .produit-prix {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        
+        /* ===== BOUTONS TOUCH FRIENDLY ===== */
+        .btn-commander {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            padding: 16px 24px;
+            text-decoration: none;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            min-height: 52px; /* Grande zone tactile */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            font-weight: 500;
+            touch-action: manipulation; /* Meilleure réactivité tactile */
+        }
+        
+        .btn-commander:hover,
+        .btn-commander:focus {
+            background: #B08A5D;
+            outline: 3px solid rgba(197, 165, 114, 0.3);
+            outline-offset: 2px;
+            transform: translateY(-2px);
+        }
+        
+        /* ===== ATELIER RESPONSIVE ===== */
+        .atelier {
+            padding: 50px 0;
+            background: var(--beige);
+        }
+        
+        .atelier-content {
+            display: flex;
+            flex-direction: column; /* Colonne sur mobile */
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .atelier-image {
+            width: 100%;
+            height: 250px; /* Plus court sur mobile */
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .atelier-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .atelier-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        /* ===== FORMULAIRE MOBILE ===== */
+        .section-commande {
+            background: var(--noir);
+            color: white;
+            padding: 50px var(--padding-mobile);
+            margin: 40px 0;
+        }
+        
+        .form-container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        .form-titre {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+            color: var(--gold);
+        }
+        
+        .netlify-form {
+            display: grid;
+            gap: 18px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--beige);
+            font-size: 0.95rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 16px; /* Plus grand pour le touch */
+            border: 2px solid #444;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: inherit;
+            font-size: 16px; /* Évite le zoom sur iOS */
+            border-radius: 6px;
+            -webkit-appearance: none; /* Retire le style natif iOS */
+            appearance: none;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        select {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 20px;
+            padding-right: 50px;
+        }
+        
+        /* ===== CONTACT RESPONSIVE ===== */
+        .contact {
+            text-align: center;
+            padding: 50px var(--padding-mobile);
+        }
+        
+        .contact-links {
+            display: flex;
+            flex-direction: column; /* Colonne sur mobile */
+            gap: 20px;
+            margin-top: 25px;
+        }
+        
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 12px;
+            border: 1px solid rgba(197, 165, 114, 0.3);
+            border-radius: 8px;
+            transition: all 0.3s;
+            justify-content: center;
+            min-height: 52px;
+        }
+        
+        .contact-link:hover,
+        .contact-link:focus {
+            background: rgba(197, 165, 114, 0.1);
+            transform: translateY(-2px);
+            outline: none;
+        }
+        
+        /* ===== FOOTER MOBILE ===== */
+        footer {
+            text-align: center;
+            padding: 30px var(--padding-mobile);
+            border-top: 1px solid rgba(197, 165, 114, 0.3);
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: auto; /* Pousse le footer en bas */
+        }
+        
+        /* ===== MEDIA QUERIES PROGRESSIVES ===== */
+        
+        /* Tablettes (à partir de 600px) */
+        @media screen and (min-width: 600px) {
+            .container {
+                padding: 0 24px;
+            }
+            
+            .logo {
+                font-size: 2.2rem;
+            }
+            
+            .hero {
+                padding: 80px 24px;
+                min-height: 70vh;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .grid-produits {
+                grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+                gap: 25px;
+            }
+            
+            .atelier-content {
+                flex-direction: row; /* Côte à côte sur tablette+ */
+                gap: 40px;
+            }
+            
+            .atelier-image {
+                height: 350px;
+                flex: 1;
+            }
+            
+            .contact-links {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .contact-link {
+                flex: 1;
+                min-width: 200px;
+                max-width: 300px;
+            }
+        }
+        
+        /* Desktop (à partir de 900px) */
+        @media screen and (min-width: 900px) {
+            .container {
+                padding: 0 var(--padding-desktop);
+            }
+            
+            .logo {
+                font-size: 2.8rem;
+                letter-spacing: 4px;
+            }
+            
+            .sous-titre {
+                font-size: 1.1rem;
+            }
+            
+            nav {
+                gap: 30px;
+            }
+            
+            nav a {
+                font-size: 0.9rem;
+                padding: 10px 0;
+            }
+            
+            .hero {
+                padding: 100px var(--padding-desktop);
+                margin: 40px 0;
+                border-radius: 12px;
+                min-height: 80vh;
+            }
+            
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .produits-titre {
+                font-size: 2.5rem;
+                margin: 60px 0 40px;
+            }
+            
+            .grid-produits {
+                grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur desktop */
+                gap: 40px;
+            }
+            
+            .produit-image {
+                height: 400px;
+            }
+            
+            .section-commande {
+                padding: 80px var(--padding-desktop);
+                margin: 60px 0;
+                border-radius: 12px;
+            }
+            
+            .form-titre {
+                font-size: 2rem;
+            }
+            
+            .form-container {
+                max-width: 600px;
+            }
+            
+            .contact {
+                padding: 60px var(--padding-desktop);
+            }
+            
+            footer {
+                padding: 40px var(--padding-desktop);
+            }
+        }
+        
+        /* Grands écrans (à partir de 1200px) */
+        @media screen and (min-width: 1200px) {
+            .hero h1 {
+                font-size: 4rem;
+            }
+            
+            .grid-produits {
+                gap: 50px;
+            }
+        }
+        
+        /* ===== UTILITAIRES ===== */
+        .hidden { 
+            display: none; 
+        }
+        
+        /* États de validation formulaire */
+        input:invalid,
+        select:invalid,
+        textarea:invalid {
+            border-color: #ff6b6b;
+        }
+        
+        input:valid,
+        select:valid,
+        textarea:valid {
+            border-color: #4CAF50;
+        }
+        
+        /* Focus visible pour accessibilité */
+        a:focus,
+        button:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px;
+        }
+        
+        /* Désactiver l'effet actif sur mobile pour certains éléments */
+        @media (hover: none) and (pointer: coarse) {
+            .btn-commander:hover,
+            .contact-link:hover,
+            .produit:hover {
+                transform: none;
+            }
+            
+            .produit:hover {
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            }
+        }
+        
+        /* Support des navigateurs plus anciens */
+        @supports not (display: grid) {
+            .grid-produits {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            
+            .produit {
+                flex: 1 1 300px;
+                min-width: 280px;
+            }
+        }
+        
+        /* Correction Safari iOS */
+        @media screen and (max-width: 767px) {
+            input,
+            select,
+            textarea,
+            button {
+                font-size: 16px !important; /* Évite le zoom automatique */
+            }
+            
+            /* Amélioration du scroll sur iOS */
+            .grid-produits,
+            .atelier-content {
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+        
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #1a1a1a;
+                color: #f0f0f0;
+            }
+            
+            .produit {
+                background: #2a2a2a;
+            }
+            
+            .produit-nom {
+                color: #f0f0f0;
+            }
+            
+            .produit-description {
+                color: #aaa;
+            }
+        }
+    </style>
+    
+    <!-- Polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Préchargement des images critiques -->
+    <link rel="preload" href="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" as="image">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo" aria-label="Maison de Maroquinerie">MAISON DE MAROQUINERIE</div>
+            <p class="sous-titre" aria-label="Sacs à main artisanaux depuis 2024">Sacs à main artisanaux depuis 2024</p>
+            
+            <nav aria-label="Navigation principale">
+                <a href="#produits" aria-label="Voir nos collections de sacs">Collections</a>
+                <a href="#commande" aria-label="Passer une commande sur mesure">Commande</a>
+                <a href="#contact" aria-label="Nous contacter">Contact</a>
+                <a href="#atelier" aria-label="Découvrir notre atelier parisien">L'Atelier</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Présentation de la marque">
+        <div class="container">
+            <h1>L'Artisanat au Service de l'Élégance</h1>
+            <p>Chaque sac est une pièce unique, réalisée sur mesure dans notre atelier parisien avec des cuirs d'exception sélectionnés chez les meilleurs tanneurs français.</p>
+        </div>
+    </section>
+
+    <!-- Produits -->
+    <div class="container">
+        <h2 class="produits-titre" id="produits">Nos Créations</h2>
+        
+        <div class="grid-produits">
+            <!-- Produit 1 -->
+            <article class="produit" aria-label="Sac Classique Noir">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Sac Classique Noir en cuir pleine fleur français avec fermoir doré 24 carats"
+                     width="800" 
+                     height="400"
+                     loading="lazy"
+                     class="produit-image">
+                <div class="produit-info">
+                    <h3 class="produit-nom">Classique Noir</h3>
+                    <p class="produit-description">
+                        Sac main en cuir pleine fleur français, tannage végétal. 
+                        Fermoir doré 24 carats, doublure soie naturelle, finitions main.
+                    </p>
+                    <div class="produit-prix" aria-label="Prix: 290 euros">290€</div>
+                    <a href="#commande" class="btn-commander" aria-label="Commander le modèle Classique Noir">
+                        Commander ce modèle
+                    </a>
+                </div>
+            </article>
+
+            <!-- Produit 2 -->
+            <article class="produit" aria-label="Cabas Camel">
+                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Cabas Camel en cuir veg-tan italien avec intérieur organisé et poches zippées"
+                     width="800" 
+                     height="400"
+                     loading="lazy"
+                     class="produit-image">
+                <div class="produit-info">
+                    <h3 class="produit-nom">Cabas Camel</h3>
+                    <p class="produit-description">
+                        Cabas souple en cuir veg-tan italien, vieillissement naturel magnifique. 
+                        Intérieur organisé avec poches zippées.
+                    </p>
+                    <div class="produit-prix" aria-label="Prix: 340 euros">340€</div>
+                    <a href="#commande" class="btn-commander" aria-label="Commander le modèle Cabas Camel">
+                        Commander ce modèle
+                    </a>
+                </div>
+            </article>
+
+            <!-- Produit 3 -->
+            <article class="produit" aria-label="Pochette Minuit">
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Pochette Minuit soirée en cuir grainé français avec chaîne dorée détachable"
+                     width="800" 
+                     height="400"
+                     loading="lazy"
+                     class="produit-image">
+                <div class="produit-info">
+                    <h3 class="produit-nom">Pochette Minuit</h3>
+                    <p class="produit-description">
+                        Pochette soirée en cuir grainé français, chaîne dorée détachable. 
+                        Parfaite pour vos soirées les plus élégantes.
+                    </p>
+                    <div class="produit-prix" aria-label="Prix: 210 euros">210€</div>
+                    <a href="#commande" class="btn-commander" aria-label="Commander le modèle Pochette Minuit">
+                        Commander ce modèle
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Section Atelier -->
+    <section class="atelier" id="atelier" aria-label="Présentation de notre atelier">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 30px; color: var(--noir);">
+                Notre Atelier Parisien
+            </h2>
+            <div class="atelier-content">
+                <div style="width: 100%;">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Atelier de maroquinerie traditionnelle à Paris avec outils et cuirs"
+                         width="800"
+                         height="400"
+                         loading="lazy"
+                         class="atelier-image">
+                </div>
+                <div style="width: 100%;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--gold);">
+                        Savoir-faire Artisanal
+                    </h3>
+                    <p style="margin-bottom: 20px; line-height: 1.6; font-size: 1rem;">
+                        Situé au cœur de Paris, notre atelier perpétue un savoir-faire traditionnel 
+                        transmis depuis trois générations. Chaque sac est conçu, coupé et assemblé 
+                        à la main par nos artisans.
+                    </p>
+                    <ul class="atelier-list">
+                        <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px; margin-top: 3px; flex-shrink: 0;" aria-hidden="true"></i>
+                            <span style="font-size: 0.95rem;">Cuirs sélectionnés chez les tanneurs français</span>
+                        </li>
+                        <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px; margin-top: 3px; flex-shrink: 0;" aria-hidden="true"></i>
+                            <span style="font-size: 0.95rem;">Finition main avec plus de 100 étapes de fabrication</span>
+                        </li>
+                        <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px; margin-top: 3px; flex-shrink: 0;" aria-hidden="true"></i>
+                            <span style="font-size: 0.95rem;">Garantie à vie sur nos créations</span>
+                        </li>
+                        <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px; margin-top: 3px; flex-shrink: 0;" aria-hidden="true"></i>
+                            <span style="font-size: 0.95rem;">Réparations et entretien offerts</span>
+                        </li>
+                    </ul>
+                    <p style="margin-top: 20px; font-style: italic; color: var(--gold); font-size: 0.9rem;">
+                        Sur rendez-vous uniquement pour des conseils personnalisés.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulaire de Commande Netlify -->
+    <section class="section-commande" id="commande" aria-label="Formulaire de commande">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="form-titre">Commande sur Mesure</h2>
+                
+                <!-- FORMULAIRE NETLIFY -->
+                <form name="commande-sac" method="POST" netlify-honeypot="bot-field" data-netlify="true" class="netlify-form">
+                    <!-- Champ anti-spam caché -->
+                    <p class="hidden" aria-hidden="true">
+                        <label>Ne remplissez pas ce champ si vous êtes humain: <input name="bot-field" /></label>
+                    </p>
+                    
+                    <!-- Données client -->
+                    <div class="form-group">
+                        <label for="nom">Nom complet *</label>
+                        <input type="text" id="nom" name="nom" required aria-required="true">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required aria-required="true" inputmode="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telephone">Téléphone</label>
+                        <input type="tel" id="telephone" name="telephone" inputmode="tel">
+                    </div>
+                    
+                    <!-- Choix produit -->
+                    <div class="form-group">
+                        <label for="modele">Modèle choisi *</label>
+                        <select id="modele" name="modele" required aria-required="true">
+                            <option value="">Sélectionnez un modèle</option>
+                            <option value="classique-noir">Classique Noir - 290€</option>
+                            <option value="cabas-camel">Cabas Camel - 340€</option>
+                            <option value="pochette-minuit">Pochette Minuit - 210€</option>
+                            <option value="sur-mesure">Création sur mesure</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Personnalisation -->
+                    <div class="form-group">
+                        <label for="personnalisation">Personnalisations souhaitées</label>
+                        <textarea id="personnalisation" name="personnalisation" 
+                                  placeholder="Couleur spécifique, monogramme, dimensions particulières..."></textarea>
+                    </div>
+                    
+                    <!-- Adresse -->
+                    <div class="form-group">
+                        <label for="adresse">Adresse de livraison *</label>
+                        <textarea id="adresse" name="adresse" required aria-required="true"
+                                  placeholder="Nom, adresse, code postal, ville"></textarea>
+                    </div>
+                    
+                    <!-- Message -->
+                    <div class="form-group">
+                        <label for="message">Message additionnel</label>
+                        <textarea id="message" name="message" 
+                                  placeholder="Date souhaitée, questions particulières..."></textarea>
+                    </div>
+                    
+                    <!-- Bouton submit -->
+                    <button type="submit" class="btn-commander">
+                        <i class="fas fa-paper-plane"></i> Envoyer la demande
+                    </button>
+                    
+                    <p style="text-align: center; margin-top: 20px; font-size: 0.85rem; color: #aaa;">
+                        Nous vous contacterons sous 24h pour confirmer votre commande et les modalités de paiement.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact" aria-label="Informations de contact">
+        <div class="container">
+            <h2 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--noir);">Contact & Rendez-vous</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px; font-size: 1rem;">
+                Pour une visite de l'atelier, un essai personnalisé ou toute question sur nos créations.
+            </p>
+            
+            <div class="contact-links">
+                <a href="https://wa.me/33612345678" class="contact-link">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i> 
+                    <span>WhatsApp: +33 6 12 34 56 78</span>
+                </a>
+                <a href="https://instagram.com/maisonmaroquinerie" class="contact-link">
+                    <i class="fab fa-instagram" aria-hidden="true"></i> 
+                    <span>@maisonmaroquinerie</span>
+                </a>
+                <a href="mailto:contact@maison-maroquinerie.com" class="contact-link">
+                    <i class="fas fa-envelope" aria-hidden="true"></i> 
+                    <span>contact@maison-maroquinerie.com</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <p>© 2024 Maison de Maroquinerie. Tous droits réservés.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">
+                Fabrication française • Livraison 10-15 jours • Retours acceptés sous 14 jours
+            </p>
+            <p style="margin-top: 20px; font-size: 0.75rem; color: #888;">
+                Site hébergé sur Netlify • Formulaire sécurisé • SIRET: 123 456 789 00000
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript optimisé pour mobile -->
+    <script>
+        (function() {
+            'use strict';
+            
+            // Détection de l'appareil
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+            
+            // Navigation smooth améliorée
+            document.addEventListener('DOMContentLoaded', function() {
+                // Header fixe avec gestion du scroll
+                const header = document.querySelector('header');
+                let lastScroll = 0;
+                
+                if (header && isMobile) {
+                    window.addEventListener('scroll', function() {
+                        const currentScroll = window.pageYOffset;
+                        
+                        if (currentScroll <= 0) {
+                            header.style.transform = 'translateY(0)';
+                            return;
+                        }
+                        
+                        if (currentScroll > lastScroll && currentScroll > 100) {
+                            // Scroll vers le bas - cacher le header
+                            header.style.transform = 'translateY(-100%)';
+                        } else {
+                            // Scroll vers le haut - montrer le header
+                            header.style.transform = 'translateY(0)';
+                        }
+                        
+                        lastScroll = currentScroll;
+                    });
+                }
+                
+                // Navigation avec ancres
+                const navLinks = document.querySelectorAll('nav a[href^="#"]');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        
+                        if (targetElement) {
+                            // Calculer la position avec offset pour le header fixe
+                            const headerHeight = header ? header.offsetHeight : 0;
+                            const targetPosition = targetElement.offsetTop - headerHeight;
+                            
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                            
+                            // Mettre à jour l'URL sans rechargement
+                            history.pushState(null, null, targetId);
+                            
+                            // Ajouter une classe active
+                            navLinks.forEach(l => l.classList.remove('active'));
+                            this.classList.add('active');
+                        }
+                    });
+                });
+                
+                // Gestion du formulaire avec support mobile
+                const form = document.querySelector('form[name="commande-sac"]');
+                if (form) {
+                    // Éviter le zoom sur les inputs
+                    const inputs = form.querySelectorAll('input, textarea, select');
+                    inputs.forEach(input => {
+                        if (isIOS) {
+                            input.addEventListener('focus', function() {
+                                // Petit délai pour éviter les problèmes de zoom
+                                setTimeout(() => {
+                                    this.style.fontSize = '16px';
+                                }, 100);
+                            });
+                        }
+                    });
+                    
+                    // Sauvegarde automatique
+                    let formTimeout;
+                    const saveFormData = () => {
+                        const formData = new FormData(form);
+                        const data = {};
+                        formData.forEach((value, key) => {
+                            if (key !== 'bot-field') {
+                                data[key] = value;
+                            }
+                        });
+                        localStorage.setItem('maroquinerieForm', JSON.stringify(data));
+                    };
+                    
+                    // Charger les données sauvegardées
+                    const savedData = JSON.parse(localStorage.getItem('maroquinerieForm') || '{}');
+                    Object.keys(savedData).forEach(key => {
+                        const field = form.querySelector(`[name="${key}"]`);
+                        if (field) field.value = savedData[key];
+                    });
+                    
+                    // Sauvegarde avec debounce
+                    form.addEventListener('input', function() {
+                        clearTimeout(formTimeout);
+                        formTimeout = setTimeout(saveFormData, 500);
+                    });
+                    
+                    // Validation avant envoi
+                    form.addEventListener('submit', function(e) {
+                        const requiredFields = form.querySelectorAll('[required]');
+                        let isValid = true;
+                        let firstInvalid = null;
+                        
+                        requiredFields.forEach(field => {
+                            if (!field.value.trim()) {
+                                field.style.borderColor = '#ff6b6b';
+                                isValid = false;
+                                if (!firstInvalid) firstInvalid = field;
+                                
+                                // Animation de shake
+                                field.classList.add('shake');
+                                setTimeout(() => {
+                                    field.classList.remove('shake');
+                                }, 500);
+                            }
+                        });
+                        
+                        if (!isValid) {
+                            e.preventDefault();
+                            if (firstInvalid) {
+                                firstInvalid.focus();
+                                // Scroll vers le champ invalide
+                                firstInvalid.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'center'
+                                });
+                            }
+                            
+                            // Message d'erreur temporaire
+                            const errorMsg = document.createElement('div');
+                            errorMsg.style.cssText = `
+                                background: #ff6b6b;
+                                color: white;
+                                padding: 12px;
+                                margin: 10px 0;
+                                border-radius: 6px;
+                                text-align: center;
+                                animation: fadeIn 0.3s;
+                            `;
+                            errorMsg.textContent = 'Veuillez remplir tous les champs obligatoires (*)';
+                            
+                            const existingError = form.querySelector('.form-error');
+                            if (existingError) existingError.remove();
+                            
+                            errorMsg.className = 'form-error';
+                            form.insertBefore(errorMsg, form.firstChild);
+                            
+                            // Supprimer après 5 secondes
+                            setTimeout(() => {
+                                if (errorMsg.parentNode) {
+                                    errorMsg.style.opacity = '0';
+                                    setTimeout(() => {
+                                        if (errorMsg.parentNode) errorMsg.remove();
+                                    }, 300);
+                                }
+                            }, 5000);
+                            
+                            return false;
+                        }
+                        
+                        // Animation de soumission
+                        const submitBtn = form.querySelector('button[type="submit"]');
+                        const originalText = submitBtn.innerHTML;
+                        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+                        submitBtn.disabled = true;
+                        
+                        // Nettoyage après 3 secondes (au cas où)
+                        setTimeout(() => {
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.disabled = false;
+                        }, 3000);
+                        
+                        // Nettoyer le localStorage après soumission réussie
+                        localStorage.removeItem('maroquinerieForm');
+                    });
+                }
+                
+                // Optimisation pour le touch
+                if (isMobile) {
+                    // Prévenir les actions par défaut sur le touch
+                    document.addEventListener('touchstart', function() {}, { passive: true });
+                    
+                    // Améliorer la performance du scroll
+                    document.addEventListener('touchmove', function(e) {
+                        // Limiter le nombre d'événements
+                        e.preventDefault();
+                    }, { passive: false });
+                }
+                
+                // Gestion du viewport pour iOS
+                if (isIOS) {
+                    // Fix pour le viewport sur iOS
+                    document.addEventListener('focusin', function(e) {
+                        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') {
+                            setTimeout(() => {
+                                document.body.scrollTop = 0;
+                            }, 100);
+                        }
+                    });
+                }
+                
+                // Animation CSS pour le shake
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes shake {
+                        0%, 100% { transform: translateX(0); }
+                        10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                        20%, 40%, 60%, 80% { transform: translateX(5px); }
+                    }
+                    @keyframes fadeIn {
+                        from { opacity: 0; transform: translateY(-10px); }
+                        to { opacity: 1; transform: translateY(0); }
+                    }
+                    .shake {
+                        animation: shake 0.5s ease-in-out;
+                    }
+                `;
+                document.head.appendChild(style);
+            });
+            
+            // Gestion de la visibilité de la page (pour les mobiles)
+            document.addEventListener('visibilitychange', function() {
+                if (!document.hidden) {
+                    // Page redevenue visible
+                    console.log('Page visible');
+                }
+            });
+            
+        })();
+    </script>
+</body>
+</html>

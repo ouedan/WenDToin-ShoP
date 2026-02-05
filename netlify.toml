@@ -1,0 +1,31 @@
+[build]
+  publish = "."
+
+# Redirection générale pour SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Redirections spécifiques pour améliorer le SEO
+[[redirects]]
+  from = "/produits"
+  to = "/index.html#produits"
+  status = 301
+
+[[redirects]]
+  from = "/commande"
+  to = "/index.html#commande"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/index.html#contact"
+  status = 301
+
+# Pour les URLs inexistantes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+  force = true
