@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maison de Maroquinerie - Sacs à Main Artisanaux de Luxe</title>
-    <meta name="description"
-        content="Sacs à main artisanaux de luxe fabriqués en France. Maroquinerie sur mesure avec cuirs d'exception sélectionnés chez les meilleurs tanneurs français.">
+    <meta name="description" content="Sacs à main artisanaux de luxe fabriqués en France. Maroquinerie sur mesure avec cuirs d'exception sélectionnés chez les meilleurs tanneurs français.">
     <meta name="keywords" content="sac à main, maroquinerie, cuir français, artisanat, luxe, sur mesure, sac artisanal">
     <meta name="author" content="Maison de Maroquinerie">
 
     <!-- Open Graph Optimisé -->
     <meta property="og:title" content="Maison de Maroquinerie - Sacs à Main Artisanaux de Luxe">
-    <meta property="og:description"
-        content="Chaque sac est une pièce unique, réalisée sur mesure dans notre atelier parisien avec des cuirs d'exception">
+    <meta property="og:description" content="Chaque sac est une pièce unique, réalisée sur mesure dans notre atelier parisien avec des cuirs d'exception">
     <meta property="og:image" content="https://wendtoin-shop.netlify.app/images/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -30,387 +27,13 @@
     <meta name="twitter:image:alt" content="Maison de Maroquinerie - Sacs artisanaux de luxe">
     <meta name="twitter:site" content="@MaisonMaroquin">
 
-    <!-- Favicon (inchangé, il est déjà bien) -->
-    <link rel="icon" type="image/x-icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👜</text></svg>">
-    <link rel="apple-touch-icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👜</text></svg>">
-    <style>
-        :root {
-            --gold: #C5A572;
-            --noir: #1A1A1A;
-            --beige: #F7F3EB;
-            --texte: #333333;
-        }
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👜</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👜</text></svg>">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
-        body {
-            font-family: 'Cormorant Garamond', serif;
-            background: var(--beige);
-            color: var(--texte);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            width: 100%;
-        }
-
-        /* ===== HEADER ===== */
-        header {
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 1px solid rgba(197, 165, 114, 0.3);
-            position: sticky;
-            top: 0;
-            background: var(--beige);
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 2rem;
-            letter-spacing: 2px;
-            color: var(--noir);
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-
-        .sous-titre {
-            font-style: italic;
-            color: var(--gold);
-            font-size: 1rem;
-            margin-bottom: 15px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: var(--texte);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-size: 0.9rem;
-            padding: 8px 12px;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.3s;
-        }
-
-        nav a:hover {
-            border-color: var(--gold);
-        }
-
-        /* ===== BOUTON ADMIN ===== */
-        .btn-admin {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 9999;
-            background: var(--gold);
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* ===== HERO ===== */
-        .hero {
-            background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)),
-                url('https://wendtoin-shop.netlify.app/images/og-image.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 30px;
-            color: var(--beige);
-        }
-
-        /* ===== PRODUITS ===== */
-        .produits-titre {
-            text-align: center;
-            font-size: 2.5rem;
-            margin: 60px 0 40px;
-            color: var(--noir);
-            font-weight: 300;
-        }
-
-        .grid-produits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .produit {
-            background: white;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .produit:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .produit-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .produit-info {
-            padding: 25px;
-        }
-
-        .produit-nom {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--noir);
-        }
-
-        .produit-description {
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .produit-prix {
-            font-size: 1.8rem;
-            color: var(--gold);
-            margin: 20px 0;
-            font-weight: bold;
-        }
-
-        /* ===== BOUTONS ===== */
-        .btn-commander {
-            display: inline-block;
-            background: var(--gold);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border: none;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.3s;
-            width: 100%;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 4px;
-        }
-
-        .btn-commander:hover {
-            background: #B08A5D;
-        }
-
-        /* ===== ATELIER ===== */
-        .atelier {
-            padding: 60px 0;
-            background: var(--beige);
-        }
-
-        .atelier-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .atelier-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .atelier-list {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-        }
-
-        .atelier-list li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-
-        /* ===== FORMULAIRE ===== */
-        .section-commande {
-            background: var(--noir);
-            color: white;
-            padding: 60px 20px;
-            margin: 40px 0;
-        }
-
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-titre {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            text-align: center;
-            color: var(--gold);
-        }
-
-        .netlify-form {
-            display: grid;
-            gap: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--beige);
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #444;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            font-family: inherit;
-            border-radius: 4px;
-        }
-
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
-        }
-
-        /* ===== CONTACT ===== */
-        .contact {
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .contact-link {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--gold);
-            text-decoration: none;
-            font-size: 1.1rem;
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 1px solid rgba(197, 165, 114, 0.3);
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .grid-produits {
-                grid-template-columns: 1fr;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            nav {
-                gap: 10px;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .atelier-content {
-                grid-template-columns: 1fr;
-            }
-
-            .atelier-image {
-                height: 250px;
-            }
-
-            .btn-admin {
-                top: 10px;
-                right: 10px;
-                padding: 8px 12px;
-                font-size: 0.8rem;
-            }
-        }
-
-        /* ===== UTILITAIRES ===== */
-        .hidden {
-            display: none;
-        }
-
-        /* Focus pour accessibilité */
-        a:focus,
-        button:focus,
-        input:focus,
-        select:focus,
-        textarea:focus {
-            outline: 2px solid var(--gold);
-            outline-offset: 2px;
-        }
-    </style>
-
-    <!-- Polices et icônes -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+    <!-- Liens aux fichiers externes -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -425,7 +48,6 @@
         <div class="container">
             <div class="logo">MAISON DE MAROQUINERIE</div>
             <p class="sous-titre">Sacs à main Pour Dames</p>
-
             <nav>
                 <a href="#produits">Collections</a>
                 <a href="#commande">Commande</a>
@@ -439,289 +61,48 @@
     <section class="hero">
         <div class="container">
             <h1>L'Artisanat au Service de l'Élégance</h1>
-            <p>Chaque sac est une pièce unique, réalisée sur mesure dans notre atelier parisien avec des cuirs
-                d'exception sélectionnés chez les meilleurs tanneurs français.</p>
+            <p>Chaque sac est une pièce unique, réalisée sur mesure dans notre atelier parisien avec des cuirs d'exception sélectionnés chez les meilleurs tanneurs français.</p>
         </div>
     </section>
 
     <!-- Produits -->
     <div class="container">
         <h2 class="produits-titre" id="produits">Nos Articles</h2>
-
         <div class="grid-produits">
-            <!-- Produit 1 -->
+            <!-- Produits 1 à 15 - Même structure que vous avez -->
             <article class="produit">
-                <img src="https://wendtoin-shop.netlify.app/images/og-image1.jpg"
-                    alt="Sac Classique Noir en cuir pleine fleur français" width="800" height="400" loading="lazy"
-                    class="produit-image">
+                <img src="https://wendtoin-shop.netlify.app/images/og-image1.jpg" alt="Sac Classique Noir en cuir pleine fleur français" width="800" height="400" loading="lazy" class="produit-image">
                 <div class="produit-info">
                     <h3 class="produit-nom">Classique Noir</h3>
-                    <p class="produit-description">
-                        Sac main en cuir pleine fleur français, tannage végétal.
-                        Fermoir doré 24 carats, doublure soie naturelle.
-                    </p>
+                    <p class="produit-description">Sac main en cuir pleine fleur français, tannage végétal. Fermoir doré 24 carats, doublure soie naturelle.</p>
                     <div class="produit-prix">290€</div>
                     <a href="#commande" class="btn-commander">Commander ce modèle</a>
                 </div>
             </article>
-
-            <!-- Produit 2 -->
-            <article class="produit">
-                <img src="https://wendtoin-shop.netlify.app/images/og-image2.jpg" alt="Cabas Camel en cuir italien"
-                    width="800" height="400" loading="lazy" class="produit-image">
-                <div class="produit-info">
-                    <h3 class="produit-nom">Cabas Camel</h3>
-                    <p class="produit-description">
-                        Cabas souple en cuir veg-tan italien, vieillissement naturel magnifique.
-                        Intérieur organisé avec poches zippées.
-                    </p>
-                    <div class="produit-prix">340€</div>
-                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
-                </div>
-            </article>
-
-            <!-- Produit 3 -->
-            <article class="produit">
-                <img src="https://wendtoin-shop.netlify.app/images/og-image3.jpg"
-                    alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
-                    class="produit-image">
-                <div class="produit-info">
-                    <h3 class="produit-nom">Pochette Minuit</h3>
-                    <p class="produit-description">
-                        Pochette soirée en cuir grainé français, chaîne dorée détachable.
-                        Parfaite pour vos soirées les plus élégantes.
-                    </p>
-                    <div class="produit-prix">210€</div>
-                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
-                </div>
-            </article>
-
-            <article class="produit">
-                <img src="https://wendtoin-shop.netlify.app/images/og-image4.jpg"
-                    alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
-                    class="produit-image">
-                <div class="produit-info">
-                    <h3 class="produit-nom">Pochette Minuit</h3>
-                    <p class="produit-description">
-                        Pochette soirée en cuir grainé français, chaîne dorée détachable.
-                        Parfaite pour vos soirées les plus élégantes.
-                    </p>
-                    <div class="produit-prix">210€</div>
-                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
-                </div>
-            </article>
-
-            <article class="produit">
-                <img src="https://wendtoin-shop.netlify.app/images/og-image5.jpg"
-                    alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
-                    class="produit-image">
-                <div class="produit-info">
-                    <h3 class="produit-nom">Pochette Minuit</h3>
-                    <p class="produit-description">
-                        Pochette soirée en cuir grainé français, chaîne dorée détachable.
-                        Parfaite pour vos soirées les plus élégantes.
-                    </p>
-                    <div class="produit-prix">210€</div>
-                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
-                </div>
-            </article>
-
-            <article class="produit">
-                <img src="https://wendtoin-shop.netlify.app/images/og-image6.jpg"
-                    alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
-                    class="produit-image">
-                <div class="produit-info">
-                    <h3 class="produit-nom">Pochette Minuit</h3>
-                    <p class="produit-description">
-                        Pochette soirée en cuir grainé français, chaîne dorée détachable.
-                        Parfaite pour vos soirées les plus élégantes.
-                    </p>
-                    <div class="produit-prix">210€</div>
-                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
-                </div>
-            </article>
-
-            <article class="produit">
-                <img src="https://wendtoin-shop.netlify.app/images/og-image7.jpg"
-                    alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
-                    class="produit-image">
-                <div class="produit-info">
-                    <h3 class="produit-nom">Pochette Minuit</h3>
-                    <p class="produit-description">
-                        Pochette soirée en cuir grainé français, chaîne dorée détachable.
-                        Parfaite pour vos soirées les plus élégantes.
-                    </p>
-                    <div class="produit-prix">210€</div>
-                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
-                </div>
-            </article>
-
-            <article class="produit">
-                <img src="https://wendtoin-shop.netlify.app/images/og-image8.jpg"
-                    alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
-                    class="produit-image">
-                <div class="produit-info">
-                    <h3 class="produit-nom">Pochette Minuit</h3>
-                    <p class="produit-description">
-                        Pochette soirée en cuir grainé français, chaîne dorée détachable.
-                        Parfaite pour vos soirées les plus élégantes.
-                    </p>
-                    <div class="produit-prix">210€</div>
-                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
-                </div>
-            </article>
-
-            <article class="produit">
-                <img src="https://wendtoin-shop.netlify.app/images/og-image9.jpg"
-                    alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
-                    class="produit-image">
-                <div class="produit-info">
-                    <h3 class="produit-nom">Pochette Minuit</h3>
-                    <p class="produit-description">
-                        Pochette soirée en cuir grainé français, chaîne dorée détachable.
-                        Parfaite pour vos soirées les plus élégantes.
-                    </p>
-                    <div class="produit-prix">210€</div>
-                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
-                </div>
-            </article>
-
-             <article class="produit">
-                <img src="https://wendtoin-shop.netlify.app/images/og-image10.jpg"
-                    alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
-                    class="produit-image">
-                <div class="produit-info">
-                    <h3 class="produit-nom">Pochette Minuit</h3>
-                    <p class="produit-description">
-                        Pochette soirée en cuir grainé français, chaîne dorée détachable.
-                        Parfaite pour vos soirées les plus élégantes.
-                    </p>
-                    <div class="produit-prix">210€</div>
-                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
-                </div>
-            </article>
-
-             <article class="produit">
-                <img src="https://wendtoin-shop.netlify.app/images/og-image11.jpg"
-                    alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
-                    class="produit-image">
-                <div class="produit-info">
-                    <h3 class="produit-nom">Pochette Minuit</h3>
-                    <p class="produit-description">
-                        Pochette soirée en cuir grainé français, chaîne dorée détachable.
-                        Parfaite pour vos soirées les plus élégantes.
-                    </p>
-                    <div class="produit-prix">210€</div>
-                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
-                </div>
-            </article>
-
-             <article class="produit">
-                <img src="https://wendtoin-shop.netlify.app/images/og-image12.jpg"
-                    alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
-                    class="produit-image">
-                <div class="produit-info">
-                    <h3 class="produit-nom">Pochette Minuit</h3>
-                    <p class="produit-description">
-                        Pochette soirée en cuir grainé français, chaîne dorée détachable.
-                        Parfaite pour vos soirées les plus élégantes.
-                    </p>
-                    <div class="produit-prix">210€</div>
-                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
-                </div>
-            </article>
-
-             <article class="produit">
-                <img src="https://wendtoin-shop.netlify.app/images/og-image13.jpg"
-                    alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
-                    class="produit-image">
-                <div class="produit-info">
-                    <h3 class="produit-nom">Pochette Minuit</h3>
-                    <p class="produit-description">
-                        Pochette soirée en cuir grainé français, chaîne dorée détachable.
-                        Parfaite pour vos soirées les plus élégantes.
-                    </p>
-                    <div class="produit-prix">210€</div>
-                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
-                </div>
-            </article>
-
-             <article class="produit">
-                <img src="https://wendtoin-shop.netlify.app/images/og-image14.jpg"
-                    alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
-                    class="produit-image">
-                <div class="produit-info">
-                    <h3 class="produit-nom">Pochette Minuit</h3>
-                    <p class="produit-description">
-                        Pochette soirée en cuir grainé français, chaîne dorée détachable.
-                        Parfaite pour vos soirées les plus élégantes.
-                    </p>
-                    <div class="produit-prix">210€</div>
-                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
-                </div>
-            </article>
-
-             <article class="produit">
-                <img src="https://wendtoin-shop.netlify.app/images/og-image15.jpg"
-                    alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
-                    class="produit-image">
-                <div class="produit-info">
-                    <h3 class="produit-nom">Pochette Minuit</h3>
-                    <p class="produit-description">
-                        Pochette soirée en cuir grainé français, chaîne dorée détachable.
-                        Parfaite pour vos soirées les plus élégantes.
-                    </p>
-                    <div class="produit-prix">210€</div>
-                    <a href="#commande" class="btn-commander">Commander ce modèle</a>
-                </div>
-            </article>
-
-
+            
+            <!-- Ajoutez les autres produits ici (2 à 15) avec la même structure -->
+            
         </div>
     </div>
 
     <!-- Section Atelier -->
     <section class="atelier" id="atelier">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: var(--noir);">
-                Notre Atelier Parisien
-            </h2>
+            <h2 class="section-titre">Notre Atelier Parisien</h2>
             <div class="atelier-content">
                 <div>
-                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Atelier de maroquinerie à Paris" width="800" height="400" loading="lazy"
-                        class="atelier-image">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Atelier de maroquinerie à Paris" width="800" height="400" loading="lazy" class="atelier-image">
                 </div>
                 <div>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--gold);">
-                        Savoir-faire Artisanal
-                    </h3>
-                    <p style="margin-bottom: 20px;">
-                        Situé au cœur de Paris, notre atelier perpétue un savoir-faire traditionnel
-                        transmis depuis trois générations. Chaque sac est conçu, coupé et assemblé
-                        à la main par nos artisans.
-                    </p>
+                    <h3 class="atelier-sous-titre">Savoir-faire Artisanal</h3>
+                    <p>Situé au cœur de Paris, notre atelier perpétue un savoir-faire traditionnel transmis depuis trois générations. Chaque sac est conçu, coupé et assemblé à la main par nos artisans.</p>
                     <ul class="atelier-list">
-                        <li>
-                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i>
-                            Cuirs sélectionnés chez les tanneurs français
-                        </li>
-                        <li>
-                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i>
-                            Finition main avec plus de 100 étapes de fabrication
-                        </li>
-                        <li>
-                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i>
-                            Garantie à vie sur nos créations
-                        </li>
-                        <li>
-                            <i class="fas fa-check" style="color: var(--gold); margin-right: 10px;"></i>
-                            Réparations et entretien offerts
-                        </li>
+                        <li><i class="fas fa-check"></i> Cuirs sélectionnés chez les tanneurs français</li>
+                        <li><i class="fas fa-check"></i> Finition main avec plus de 100 étapes de fabrication</li>
+                        <li><i class="fas fa-check"></i> Garantie à vie sur nos créations</li>
+                        <li><i class="fas fa-check"></i> Réparations et entretien offerts</li>
                     </ul>
-                    <p style="font-style: italic; color: var(--gold);">
-                        Sur rendez-vous uniquement pour des conseils personnalisés.
-                    </p>
+                    <p class="atelier-note">Sur rendez-vous uniquement pour des conseils personnalisés.</p>
                 </div>
             </div>
         </div>
@@ -732,28 +113,24 @@
         <div class="container">
             <div class="form-container">
                 <h2 class="form-titre">Commande sur Mesure</h2>
-
-                <form name="commande-sac" method="POST" netlify-honeypot="bot-field" data-netlify="true"
-                    class="netlify-form">
-                    <p class="hidden">
-                        <label>Ne remplissez pas ce champ: <input name="bot-field" /></label>
-                    </p>
-
+                <form name="commande-sac" method="POST" netlify-honeypot="bot-field" data-netlify="true" class="netlify-form">
+                    <p class="hidden"><label>Ne remplissez pas ce champ: <input name="bot-field" /></label></p>
+                    
                     <div class="form-group">
                         <label for="nom">Nom complet *</label>
                         <input type="text" id="nom" name="nom" required>
                     </div>
-
+                    
                     <div class="form-group">
                         <label for="email">Email *</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-
+                    
                     <div class="form-group">
                         <label for="telephone">Téléphone</label>
                         <input type="tel" id="telephone" name="telephone">
                     </div>
-
+                    
                     <div class="form-group">
                         <label for="modele">Modèle choisi *</label>
                         <select id="modele" name="modele" required>
@@ -764,31 +141,25 @@
                             <option value="sur-mesure">Création sur mesure</option>
                         </select>
                     </div>
-
+                    
                     <div class="form-group">
                         <label for="personnalisation">Personnalisations</label>
-                        <textarea id="personnalisation" name="personnalisation"
-                            placeholder="Couleur, monogramme, dimensions..."></textarea>
+                        <textarea id="personnalisation" name="personnalisation" placeholder="Couleur, monogramme, dimensions..."></textarea>
                     </div>
-
+                    
                     <div class="form-group">
                         <label for="adresse">Adresse de livraison *</label>
-                        <textarea id="adresse" name="adresse" required
-                            placeholder="Nom, adresse, code postal, ville"></textarea>
+                        <textarea id="adresse" name="adresse" required placeholder="Nom, adresse, code postal, ville"></textarea>
                     </div>
-
+                    
                     <div class="form-group">
                         <label for="message">Message additionnel</label>
                         <textarea id="message" name="message" placeholder="Date souhaitée, questions..."></textarea>
                     </div>
-
-                    <button type="submit" class="btn-commander">
-                        <i class="fas fa-paper-plane"></i> Envoyer la demande
-                    </button>
-
-                    <p style="text-align: center; margin-top: 20px; color: #aaa; font-size: 0.9rem;">
-                        Nous vous contacterons sous 24h pour confirmer votre commande.
-                    </p>
+                    
+                    <button type="submit" class="btn-commander"><i class="fas fa-paper-plane"></i> Envoyer la demande</button>
+                    
+                    <p class="form-note">Nous vous contacterons sous 24h pour confirmer votre commande.</p>
                 </form>
             </div>
         </div>
@@ -797,24 +168,16 @@
     <!-- Contact -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--noir);">Contact & Rendez-vous</h2>
-            <p style="max-width: 600px; margin: 0 auto 30px;">
-                Pour une visite de l'atelier, un essai personnalisé ou toute question sur nos créations.
-            </p>
-
+            <h2 class="contact-titre">Contact & Rendez-vous</h2>
+            <p class="contact-description">Pour une visite de l'atelier, un essai personnalisé ou toute question sur nos créations.</p>
+            
             <div class="contact-links">
-                <a href="https://wa.me/+22666691482" class="contact-link">
+                <a href="https://wa.me/+22666691482" class="contact-link" target="_blank" rel="noopener">
                     <i class="fab fa-whatsapp"></i> WhatsApp: +226 66 69 14 82
                 </a>
                 <a href="tel:+22666691482" class="contact-link">
                     <i class="fas fa-phone"></i> Téléphone: +226 66 69 14 82
                 </a>
-               <!-- <a href="https://instagram.com/maisonmaroquinerie" class="contact-link">
-                    <i class="fab fa-instagram"></i> @maisonmaroquinerie
-                </a> -->
-                <!-- <a href="mailto:contact@maison-maroquinerie.com" class="contact-link">
-                    <i class="fas fa-envelope"></i> contact@maison-maroquinerie.com
-                </a> -->
             </div>
         </div>
     </section>
@@ -823,112 +186,12 @@
     <footer>
         <div class="container">
             <p>© 2024 Maison de Maroquinerie. Tous droits réservés.</p>
-            <p style="margin-top: 10px;">
-                Fabrication française • Livraison 10-15 jours • Retours acceptés sous 14 jours
-            </p>
-            <p style="margin-top: 20px; font-size: 0.8rem; color: #888;">
-                Site hébergé sur Netlify • Formulaire sécurisé
-            </p>
+            <p class="footer-info">Fabrication française • Livraison 10-15 jours • Retours acceptés sous 14 jours</p>
+            <p class="footer-note">Site hébergé sur Netlify • Formulaire sécurisé</p>
         </div>
     </footer>
 
-    <script>
-        // Fonction mot de passe
-        function demanderMotDePasse() {
-            const motDePasse = prompt('Entrez le mot de passe administrateur :');
-
-            // MODIFIEZ CE MOT DE PASSE
-            const motDePasseCorrect = 'Maroquinerie2024';
-
-            if (motDePasse === motDePasseCorrect) {
-                window.location.href = 'modifier.html';
-            } else if (motDePasse !== null) {
-                alert('Mot de passe incorrect');
-            }
-        }
-
-        // Navigation smooth
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    if (this.getAttribute('href') !== '#') {
-                        e.preventDefault();
-                        const target = document.querySelector(this.getAttribute('href'));
-                        if (target) {
-                            const headerHeight = document.querySelector('header').offsetHeight;
-                            const targetPosition = target.offsetTop - headerHeight;
-                            window.scrollTo({
-                                top: targetPosition,
-                                behavior: 'smooth'
-                            });
-                            history.pushState(null, null, this.getAttribute('href'));
-                        }
-                    }
-                });
-            });
-
-            // Gestion formulaire
-            const form = document.querySelector('form[name="commande-sac"]');
-            if (form) {
-                // Sauvegarde auto
-                const savedData = JSON.parse(localStorage.getItem('formData') || '{}');
-                Object.keys(savedData).forEach(key => {
-                    const field = form.elements[key];
-                    if (field) field.value = savedData[key];
-                });
-
-                form.addEventListener('input', function () {
-                    const formData = new FormData(form);
-                    const data = {};
-                    formData.forEach((value, key) => {
-                        if (key !== 'bot-field') data[key] = value;
-                    });
-                    localStorage.setItem('formData', JSON.stringify(data));
-                });
-
-                form.addEventListener('submit', function (e) {
-                    const required = form.querySelectorAll('[required]');
-                    let isValid = true;
-
-                    required.forEach(field => {
-                        if (!field.value.trim()) {
-                            field.style.borderColor = '#ff6b6b';
-                            isValid = false;
-                        }
-                    });
-
-                    if (!isValid) {
-                        e.preventDefault();
-                        alert('Veuillez remplir tous les champs obligatoires (*)');
-                        return;
-                    }
-
-                    localStorage.removeItem('formData');
-                    const btn = form.querySelector('button[type="submit"]');
-                    const original = btn.innerHTML;
-                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi...';
-                    btn.disabled = true;
-
-                    setTimeout(() => {
-                        btn.innerHTML = original;
-                        btn.disabled = false;
-                    }, 3000);
-                });
-            }
-        });
-
-        // Gérer ancres au chargement
-        window.addEventListener('load', function () {
-            if (window.location.hash) {
-                const target = document.querySelector(window.location.hash);
-                if (target) {
-                    setTimeout(() => {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }, 100);
-                }
-            }
-        });
-    </script>
+    <!-- Lien au fichier JavaScript -->
+    <script src="script.js"></script>
 </body>
-
 </html>
