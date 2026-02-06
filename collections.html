@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <!-- Même head que index.html -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collections - Maison des Chics Sacs à Main</title>
     <meta name="description" content="Découvrez toutes nos collections de sacs à main artisanaux en cuir français.">
-    
+
     <!-- Même liens CSS que index.html -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Bouton Admin -->
     <button class="btn-admin" onclick="demanderMotDePasse()">
@@ -37,13 +40,14 @@
     <section class="page-hero">
         <div class="container">
             <h1>Nos Collections Exclusives</h1>
-            <p>Découvrez l'ensemble de nos créations artisanales, chaque pièce unique est une ode à l'élégance française.</p>
+            <p>Découvrez l'ensemble de nos créations artisanales, chaque pièce unique est une ode à l'élégance
+                française.</p>
         </div>
     </section>
 
     <!-- Breadcrumb -->
     <div class="breadcrumb container">
-        <a href="index.html">Accueil</a> 
+        <a href="index.html">Accueil</a>
         <span>›</span>
         <span>Collections</span>
     </div>
@@ -52,33 +56,247 @@
     <section class="page-content">
         <div class="container">
             <div class="collections-intro">
-                <p>Notre savoir-faire artisanal se décline en plusieurs collections, chacune représentant une facette de notre passion pour la maroquinerie de luxe. Des classiques intemporels aux pièces contemporaines, chaque sac est conçu avec la même exigence de qualité.</p>
+                <p>Notre savoir-faire artisanal se décline en plusieurs collections, chacune représentant une facette de
+                    notre passion pour la maroquinerie de luxe. Des classiques intemporels aux pièces contemporaines,
+                    chaque sac est conçu avec la même exigence de qualité.</p>
             </div>
 
             <h2 class="produits-titre">Tous Nos Modèles</h2>
-            
+
             <!-- Copiez ici TOUTE votre section produits (grid-produits) depuis index.html -->
-            <div class="grid-produits">
-                <!-- Produit 1 -->
-                <article class="produit">
-                    <img src="https://wendtoin-shop.netlify.app/images/og-image1.jpg"
-                         alt="Sac Classique Noir en cuir pleine fleur français" 
-                         class="produit-image">
-                    <div class="produit-info">
-                        <h3 class="produit-nom">Classique Noir</h3>
-                        <p class="produit-description">
-                            Sac main en cuir pleine fleur français, tannage végétal.
-                            Fermoir doré 24 carats, doublure soie naturelle.
-                        </p>
-                        <div class="produit-prix">290€</div>
-                        <a href="commande.html" class="btn-commander">Commander ce modèle</a>
-                    </div>
-                </article>
-                
-                <!-- Ajoutez tous les autres produits (2 à 15) -->
-                <!-- ... -->
-            </div>
-        </div>
+            <!-- Produits -->
+            <div class="container">
+                <h2 class="produits-titre" id="produits">Nos Articles</h2>
+
+                <div class="grid-produits">
+                    <!-- Produit 1 -->
+                    <article class="produit">
+                        <img src="https://wendtoin-shop.netlify.app/images/og-image1.jpg"
+                            alt="Sac Classique Noir en cuir pleine fleur français" width="800" height="400"
+                            loading="lazy" class="produit-image">
+                        <div class="produit-info">
+                            <h3 class="produit-nom">Classique Noir</h3>
+                            <p class="produit-description">
+                                Sac main en cuir pleine fleur français, tannage végétal.
+                                Fermoir doré 24 carats, doublure soie naturelle.
+                            </p>
+                            <div class="produit-prix">290€</div>
+                            <a href="#commande" class="btn-commander">Commander ce modèle</a>
+                        </div>
+                    </article>
+
+                    <!-- Produit 2 -->
+                    <article class="produit">
+                        <img src="https://wendtoin-shop.netlify.app/images/og-image2.jpg"
+                            alt="Cabas Camel en cuir italien" width="800" height="400" loading="lazy"
+                            class="produit-image">
+                        <div class="produit-info">
+                            <h3 class="produit-nom">Cabas Camel</h3>
+                            <p class="produit-description">
+                                Cabas souple en cuir veg-tan italien, vieillissement naturel magnifique.
+                                Intérieur organisé avec poches zippées.
+                            </p>
+                            <div class="produit-prix">340€</div>
+                            <a href="#commande" class="btn-commander">Commander ce modèle</a>
+                        </div>
+                    </article>
+
+                    <!-- Produit 3 -->
+                    <article class="produit">
+                        <img src="https://wendtoin-shop.netlify.app/images/og-image3.jpg"
+                            alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
+                            class="produit-image">
+                        <div class="produit-info">
+                            <h3 class="produit-nom">Pochette Minuit</h3>
+                            <p class="produit-description">
+                                Pochette soirée en cuir grainé français, chaîne dorée détachable.
+                                Parfaite pour vos soirées les plus élégantes.
+                            </p>
+                            <div class="produit-prix">210€</div>
+                            <a href="#commande" class="btn-commander">Commander ce modèle</a>
+                        </div>
+                    </article>
+
+                    <article class="produit">
+                        <img src="https://wendtoin-shop.netlify.app/images/og-image4.jpg"
+                            alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
+                            class="produit-image">
+                        <div class="produit-info">
+                            <h3 class="produit-nom">Pochette Minuit</h3>
+                            <p class="produit-description">
+                                Pochette soirée en cuir grainé français, chaîne dorée détachable.
+                                Parfaite pour vos soirées les plus élégantes.
+                            </p>
+                            <div class="produit-prix">210€</div>
+                            <a href="#commande" class="btn-commander">Commander ce modèle</a>
+                        </div>
+                    </article>
+
+                    <article class="produit">
+                        <img src="https://wendtoin-shop.netlify.app/images/og-image5.jpg"
+                            alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
+                            class="produit-image">
+                        <div class="produit-info">
+                            <h3 class="produit-nom">Pochette Minuit</h3>
+                            <p class="produit-description">
+                                Pochette soirée en cuir grainé français, chaîne dorée détachable.
+                                Parfaite pour vos soirées les plus élégantes.
+                            </p>
+                            <div class="produit-prix">210€</div>
+                            <a href="#commande" class="btn-commander">Commander ce modèle</a>
+                        </div>
+                    </article>
+
+                    <article class="produit">
+                        <img src="https://wendtoin-shop.netlify.app/images/og-image6.jpg"
+                            alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
+                            class="produit-image">
+                        <div class="produit-info">
+                            <h3 class="produit-nom">Pochette Minuit</h3>
+                            <p class="produit-description">
+                                Pochette soirée en cuir grainé français, chaîne dorée détachable.
+                                Parfaite pour vos soirées les plus élégantes.
+                            </p>
+                            <div class="produit-prix">210€</div>
+                            <a href="#commande" class="btn-commander">Commander ce modèle</a>
+                        </div>
+                    </article>
+
+                    <article class="produit">
+                        <img src="https://wendtoin-shop.netlify.app/images/og-image7.jpg"
+                            alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
+                            class="produit-image">
+                        <div class="produit-info">
+                            <h3 class="produit-nom">Pochette Minuit</h3>
+                            <p class="produit-description">
+                                Pochette soirée en cuir grainé français, chaîne dorée détachable.
+                                Parfaite pour vos soirées les plus élégantes.
+                            </p>
+                            <div class="produit-prix">210€</div>
+                            <a href="#commande" class="btn-commander">Commander ce modèle</a>
+                        </div>
+                    </article>
+
+                    <article class="produit">
+                        <img src="https://wendtoin-shop.netlify.app/images/og-image8.jpg"
+                            alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
+                            class="produit-image">
+                        <div class="produit-info">
+                            <h3 class="produit-nom">Pochette Minuit</h3>
+                            <p class="produit-description">
+                                Pochette soirée en cuir grainé français, chaîne dorée détachable.
+                                Parfaite pour vos soirées les plus élégantes.
+                            </p>
+                            <div class="produit-prix">210€</div>
+                            <a href="#commande" class="btn-commander">Commander ce modèle</a>
+                        </div>
+                    </article>
+
+                    <article class="produit">
+                        <img src="https://wendtoin-shop.netlify.app/images/og-image9.jpg"
+                            alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
+                            class="produit-image">
+                        <div class="produit-info">
+                            <h3 class="produit-nom">Pochette Minuit</h3>
+                            <p class="produit-description">
+                                Pochette soirée en cuir grainé français, chaîne dorée détachable.
+                                Parfaite pour vos soirées les plus élégantes.
+                            </p>
+                            <div class="produit-prix">210€</div>
+                            <a href="#commande" class="btn-commander">Commander ce modèle</a>
+                        </div>
+                    </article>
+
+                    <article class="produit">
+                        <img src="https://wendtoin-shop.netlify.app/images/og-image10.jpg"
+                            alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
+                            class="produit-image">
+                        <div class="produit-info">
+                            <h3 class="produit-nom">Pochette Minuit</h3>
+                            <p class="produit-description">
+                                Pochette soirée en cuir grainé français, chaîne dorée détachable.
+                                Parfaite pour vos soirées les plus élégantes.
+                            </p>
+                            <div class="produit-prix">210€</div>
+                            <a href="#commande" class="btn-commander">Commander ce modèle</a>
+                        </div>
+                    </article>
+
+                    <article class="produit">
+                        <img src="https://wendtoin-shop.netlify.app/images/og-image11.jpg"
+                            alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
+                            class="produit-image">
+                        <div class="produit-info">
+                            <h3 class="produit-nom">Pochette Minuit</h3>
+                            <p class="produit-description">
+                                Pochette soirée en cuir grainé français, chaîne dorée détachable.
+                                Parfaite pour vos soirées les plus élégantes.
+                            </p>
+                            <div class="produit-prix">210€</div>
+                            <a href="#commande" class="btn-commander">Commander ce modèle</a>
+                        </div>
+                    </article>
+
+                    <article class="produit">
+                        <img src="https://wendtoin-shop.netlify.app/images/og-image12.jpg"
+                            alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
+                            class="produit-image">
+                        <div class="produit-info">
+                            <h3 class="produit-nom">Pochette Minuit</h3>
+                            <p class="produit-description">
+                                Pochette soirée en cuir grainé français, chaîne dorée détachable.
+                                Parfaite pour vos soirées les plus élégantes.
+                            </p>
+                            <div class="produit-prix">210€</div>
+                            <a href="#commande" class="btn-commander">Commander ce modèle</a>
+                        </div>
+                    </article>
+
+                    <article class="produit">
+                        <img src="https://wendtoin-shop.netlify.app/images/og-image13.jpg"
+                            alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
+                            class="produit-image">
+                        <div class="produit-info">
+                            <h3 class="produit-nom">Pochette Minuit</h3>
+                            <p class="produit-description">
+                                Pochette soirée en cuir grainé français, chaîne dorée détachable.
+                                Parfaite pour vos soirées les plus élégantes.
+                            </p>
+                            <div class="produit-prix">210€</div>
+                            <a href="#commande" class="btn-commander">Commander ce modèle</a>
+                        </div>
+                    </article>
+
+                    <article class="produit">
+                        <img src="https://wendtoin-shop.netlify.app/images/og-image14.jpg"
+                            alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
+                            class="produit-image">
+                        <div class="produit-info">
+                            <h3 class="produit-nom">Pochette Minuit</h3>
+                            <p class="produit-description">
+                                Pochette soirée en cuir grainé français, chaîne dorée détachable.
+                                Parfaite pour vos soirées les plus élégantes.
+                            </p>
+                            <div class="produit-prix">210€</div>
+                            <a href="#commande" class="btn-commander">Commander ce modèle</a>
+                        </div>
+                    </article>
+
+                    <article class="produit">
+                        <img src="https://wendtoin-shop.netlify.app/images/og-image15.jpg"
+                            alt="Pochette Minuit soirée en cuir français" width="800" height="400" loading="lazy"
+                            class="produit-image">
+                        <div class="produit-info">
+                            <h3 class="produit-nom">Pochette Minuit</h3>
+                            <p class="produit-description">
+                                Pochette soirée en cuir grainé français, chaîne dorée détachable.
+                                Parfaite pour vos soirées les plus élégantes.
+                            </p>
+                            <div class="produit-prix">210€</div>
+                            <a href="#commande" class="btn-commander">Commander ce modèle</a>
+                        </div>
+                    </article>
+                </div>
     </section>
 
     <!-- Footer -->
@@ -92,4 +310,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
