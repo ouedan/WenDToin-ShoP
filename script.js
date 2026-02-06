@@ -171,3 +171,142 @@ function ouvrirWhatsApp(telephone, message) {
     const messageEncode = encodeURIComponent(message);
     window.open(`https://wa.me/${numeroFormatte}?text=${messageEncode}`, '_blank');
 }
+
+// ===== GESTION FORMULAIRE WHATSAPP =====
+document.addEventListener('DOMContentLoaded', function() {
+    const whatsappForm = document.querySelector('.whatsapp-form');
+    
+    if (whatsappForm) {
+        // Désactiver la soumission normale
+        whatsappForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validation
+            const required = whatsappForm.querySelectorAll('[required]');
+            let isValid = true;
+            
+            required.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = '#ff6b6b';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+            
+            // Validation email
+            const emailField = whatsappForm.querySelector('#email');
+            if (emailField && emailField.value) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailField.value)) {
+                    emailField.style.borderColor = '#ff6b6b';
+                    alert('Veuillez entrer une adresse email valide');
+                    isValid = false;
+                }
+            }
+            
+            if (!isValid) {
+                alert('Veuillez remplir tous les champs obligatoires (*)');
+                return;
+            }
+            
+            // Construire le message WhatsApp formaté
+            const message = construireMessageWhatsApp();
+            const messageEncode = encodeURIComponent(message);
+            
+            // Mettre à jour le champ caché
+            const messageField = whatsappForm.querySelector('#whatsapp-message');
+            messageField.value = message;
+            
+            // Animation du bouton
+            const btn = whatsappForm.querySelector('button[type="submit"]');
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Préparation...';
+            btn.disabled = true;
+            
+            // Ouvrir WhatsApp après un court délai
+            setTimeout(() => {
+                const phoneNumber = '22666691482'; // VOTRE numéro sans +
+                const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${messageEncode}`;
+                
+                window.open(whatsappURL, '_blank');
+                
+                // Réinitialiser le formulaire
+                whatsappForm.reset();
+                localStorage.removeItem('formData');
+                
+                // Réactiver le bouton
+                btn.innerHTML = originalHTML;
+                btn.disabled = false;
+                
+                // Message de confirmation
+                alert('✅ WhatsApp s\'ouvre ! Vérifiez le message et envoyez-le.');
+            }, 1000);
+        });
+        
+        // Sauvegarde automatique des données
+        whatsappForm.addEventListener('input', function() {
+            const formData = new FormData(whatsappForm);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            localStorage.setItem('formData', JSON.stringify(data));
+        });
+        
+        // Charger les données sauvegardées
+        const savedData = JSON.parse(localStorage.getItem('formData') || '{}');
+        Object.keys(savedData).forEach(key => {
+            const field = whatsappForm.elements[key];
+            if (field) field.value = savedData[key];
+        });
+    }
+});
+
+// ===== FONCTION POUR CONSTRUIRE LE MESSAGE =====
+function construireMessageWhatsApp() {
+    const form = document.querySelector('.whatsapp-form');
+    if (!form) return '';
+    
+    // Récupérer les valeurs
+    const nom = form.querySelector('#nom').value;
+    const email = form.querySelector('#email').value;
+    const telephone = form.querySelector('#telephone').value;
+    const modele = form.querySelector('#modele').value;
+    const personnalisation = form.querySelector('#personnalisation').value;
+    const adresse = form.querySelector('#adresse').value;
+    const message = form.querySelector('#message').value;
+    
+    // Construire le message formaté
+    let whatsappMessage = `👜 COMMANDE - MAISON DE MAROQUINERIE 👜\n\n`;
+    whatsappMessage += `👤 **INFORMATIONS CLIENT**\n`;
+    whatsappMessage += `• Nom : ${nom}\n`;
+    whatsappMessage += `• Email : ${email}\n`;
+    whatsappMessage += `• Téléphone : ${telephone}\n\n`;
+    
+    whatsappMessage += `🛍️ **DÉTAILS DE LA COMMANDE**\n`;
+    whatsappMessage += `• Modèle : ${modele}\n`;
+    
+    if (personnalisation.trim()) {
+        whatsappMessage += `• Personnalisation : ${personnalisation}\n`;
+    }
+    
+    whatsappMessage += `\n📍 **ADRESSE DE LIVRAISON**\n`;
+    whatsappMessage += `${adresse}\n\n`;
+    
+    if (message.trim()) {
+        whatsappMessage += `💬 **MESSAGE ADDITIONNEL**\n`;
+        whatsappMessage += `${message}\n\n`;
+    }
+    
+    whatsappMessage += `📅 Commande envoyée le : ${new Date().toLocaleDateString('fr-FR', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    })}`;
+    
+    return whatsappMessage;
+}

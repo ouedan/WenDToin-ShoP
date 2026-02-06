@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maison de Maroquinerie - Sacs à Main Artisanaux de Luxe</title>
+    <title>Boutique des Chics Sacs à Main</title>
     <meta name="description"
         content="Sacs à main artisanaux de luxe fabriqués en France. Maroquinerie sur mesure avec cuirs d'exception sélectionnés chez les meilleurs tanneurs français.">
     <meta name="keywords" content="sac à main, maroquinerie, cuir français, artisanat, luxe, sur mesure, sac artisanal">
     <meta name="author" content="Maison de Maroquinerie">
 
     <!-- Open Graph Optimisé -->
-    <meta property="og:title" content="Maison de Maroquinerie - Sacs à Main Artisanaux de Luxe">
+    <meta property="og:title" content="Boutique des Chics Sacs à Main">
     <meta property="og:description"
         content="Chaque sac est une pièce unique, réalisée sur mesure dans notre atelier parisien avec des cuirs d'exception">
     <meta property="og:image" content="https://wendtoin-shop.netlify.app/images/og-image.jpg">
@@ -52,7 +52,7 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="logo">MAISON DE MAROQUINERIE</div>
+            <div class="logo">Maison des Chics Sacs à Main</div>
             <p class="sous-titre">Sacs à main Pour Dames</p>
             <nav>
                 <a href="#produits">Collections</a>
@@ -339,57 +339,68 @@
         <div class="container">
             <div class="form-container">
                 <h2 class="form-titre">Commande sur Mesure</h2>
-                <form name="commande-sac" method="POST" netlify-honeypot="bot-field" data-netlify="true"
-                    class="netlify-form">
-                    <p class="hidden"><label>Ne remplissez pas ce champ: <input name="bot-field" /></label></p>
+
+                <form name="commande-sac" method="GET" action="https://api.whatsapp.com/send" target="_blank"
+                    class="whatsapp-form">
+                    <!-- Numéro WhatsApp caché (REMPLACEZ par votre vrai numéro sans +) -->
+                    <input type="hidden" name="phone" value="22666691482">
+
+                    <!-- Message principal (sera construit par JavaScript) -->
+                    <input type="hidden" name="text" id="whatsapp-message">
 
                     <div class="form-group">
                         <label for="nom">Nom complet *</label>
-                        <input type="text" id="nom" name="nom" required>
+                        <input type="text" id="nom" name="nom" required placeholder="Votre nom et prénom">
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required placeholder="votre@email.com">
                     </div>
 
                     <div class="form-group">
-                        <label for="telephone">Téléphone</label>
-                        <input type="tel" id="telephone" name="telephone">
+                        <label for="telephone">Téléphone *</label>
+                        <input type="tel" id="telephone" name="telephone" required placeholder="+226 66 69 14 82">
                     </div>
 
                     <div class="form-group">
                         <label for="modele">Modèle choisi *</label>
                         <select id="modele" name="modele" required>
                             <option value="">Sélectionnez un modèle</option>
-                            <option value="classique-noir">Classique Noir - 290€</option>
-                            <option value="cabas-camel">Cabas Camel - 340€</option>
-                            <option value="pochette-minuit">Pochette Minuit - 210€</option>
-                            <option value="sur-mesure">Création sur mesure</option>
+                            <option value="Classique Noir - 290€">Classique Noir - 290€</option>
+                            <option value="Cabas Camel - 340€">Cabas Camel - 340€</option>
+                            <option value="Pochette Minuit - 210€">Pochette Minuit - 210€</option>
+                            <option value="Création sur mesure">Création sur mesure (contactez-nous)</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="personnalisation">Personnalisations</label>
                         <textarea id="personnalisation" name="personnalisation"
-                            placeholder="Couleur, monogramme, dimensions..."></textarea>
+                            placeholder="Couleur, monogramme, dimensions spéciales..."></textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="adresse">Adresse de livraison *</label>
                         <textarea id="adresse" name="adresse" required
-                            placeholder="Nom, adresse, code postal, ville"></textarea>
+                            placeholder="Nom, adresse complète, code postal, ville, pays"></textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Message additionnel</label>
-                        <textarea id="message" name="message" placeholder="Date souhaitée, questions..."></textarea>
+                        <textarea id="message" name="message"
+                            placeholder="Date souhaitée, questions particulières..."></textarea>
                     </div>
 
-                    <button type="submit" class="btn-commander"><i class="fas fa-paper-plane"></i> Envoyer la
-                        demande</button>
+                    <button type="submit" class="btn-commander">
+                        <i class="fab fa-whatsapp"></i> Envoyer la commande sur WhatsApp
+                    </button>
 
-                    <p class="form-note">Nous vous contacterons sous 24h pour confirmer votre commande.</p>
+                    <p class="form-note">
+                        <i class="fas fa-info-circle"></i>
+                        Après validation, WhatsApp s'ouvrira avec votre commande pré-remplie.
+                        Il ne vous restera qu'à l'envoyer.
+                    </p>
                 </form>
             </div>
         </div>

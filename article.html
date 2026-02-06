@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Atelier - Maison des Chics Sacs à Main</title>
+    <meta name="description" content="Découvrez notre atelier parisien et notre savoir-faire artisanal transmis depuis trois générations.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Bouton Admin -->
+    <button class="btn-admin" onclick="demanderMotDePasse()">
+        <i class="fas fa-lock"></i> Admin
+    </button>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">Maison des Chics Sacs à Main</div>
+            <p class="sous-titre">Sacs à main Pour Dames</p>
+            <nav>
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="collections.html" class="nav-link">Collections</a>
+                <a href="commande.html" class="nav-link">Commande</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="atelier.html" class="nav-link active">L'Atelier</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Atelier -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Notre Atelier Parisien</h1>
+            <p>Un savoir-faire artisanal transmis depuis trois générations, au cœur de Paris.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb container">
+        <a href="index.html">Accueil</a> 
+        <span>›</span>
+        <span>L'Atelier</span>
+    </div>
+
+    <!-- Contenu Atelier -->
+    <section class="page-content">
+        <div class="container">
+            <div class="atelier-content">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Atelier de maroquinerie à Paris" 
+                        class="atelier-image">
+                </div>
+                <div>
+                    <h2 class="atelier-sous-titre">Savoir-faire Artisanal</h2>
+                    <p>Situé au cœur de Paris, notre atelier perpétue un savoir-faire traditionnel transmis depuis trois générations. Chaque sac est conçu, coupé et assemblé à la main par nos artisans.</p>
+                    
+                    <ul class="atelier-list">
+                        <li><i class="fas fa-check"></i> Cuirs sélectionnés chez les tanneurs français</li>
+                        <li><i class="fas fa-check"></i> Finition main avec plus de 100 étapes de fabrication</li>
+                        <li><i class="fas fa-check"></i> Garantie à vie sur nos créations</li>
+                        <li><i class="fas fa-check"></i> Réparations et entretien offerts</li>
+                    </ul>
+                    
+                    <p class="atelier-note">Sur rendez-vous uniquement pour des conseils personnalisés.</p>
+                    
+                    <div style="margin-top: 30px;">
+                        <a href="contact.html" class="btn-commander" style="width: auto; padding: 15px 30px;">
+                            <i class="fas fa-calendar-alt"></i> Prendre rendez-vous
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Processus de fabrication -->
+            <div style="margin-top: 80px;">
+                <h2 class="page-titre">Notre Processus de Fabrication</h2>
+                
+                <div class="processus-fabrication">
+                    <div class="etape-fabrication">
+                        <div class="etape-icon">1</div>
+                        <h3>Sélection du Cuir</h3>
+                        <p>Nous choisissons les cuirs les plus nobles chez les meilleurs tanneurs français.</p>
+                    </div>
+                    
+                    <div class="etape-fabrication">
+                        <div class="etape-icon">2</div>
+                        <h3>Découpe à la Main</h3>
+                        <p>Chaque pièce est découpée manuellement avec une précision millimétrique.</p>
+                    </div>
+                    
+                    <div class="etape-fabrication">
+                        <div class="etape-icon">3</div>
+                        <h3>Assemblage Artisanal</h3>
+                        <p>Plus de 100 étapes de couture et d'assemblage réalisées à la main.</p>
+                    </div>
+                    
+                    <div class="etape-fabrication">
+                        <div class="etape-icon">4</div>
+                        <h3>Contrôle Qualité</h3>
+                        <p>Chaque sac est inspecté minutieusement avant de quitter l'atelier.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Maison de Maroquinerie. Tous droits réservés.</p>
+            <p class="footer-info">Fabrication française • Livraison 10-15 jours • Retours acceptés sous 14 jours</p>
+            <p class="footer-note">Site hébergé sur Netlify • Formulaire sécurisé</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande - Maison des Chics Sacs à Main</title>
+    <meta name="description" content="Commandez votre sac à main artisanal sur mesure directement via WhatsApp.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Bouton Admin -->
+    <button class="btn-admin" onclick="demanderMotDePasse()">
+        <i class="fas fa-lock"></i> Admin
+    </button>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">Maison des Chics Sacs à Main</div>
+            <p class="sous-titre">Sacs à main Pour Dames</p>
+            <nav>
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="collections.html" class="nav-link">Collections</a>
+                <a href="commande.html" class="nav-link active">Commande</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="atelier.html" class="nav-link">L'Atelier</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Commande -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Commande sur Mesure</h1>
+            <p>Choisissez votre modèle, personnalisez-le selon vos envies et recevez votre création unique.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb container">
+        <a href="index.html">Accueil</a> 
+        <span>›</span>
+        <span>Commande</span>
+    </div>
+
+    <!-- Processus de commande -->
+    <section class="page-content">
+        <div class="container">
+            <div class="processus-commande">
+                <h2 class="page-titre">Comment Commander</h2>
+                
+                <div class="etapes">
+                    <div class="etape">
+                        <div class="etape-numero">1</div>
+                        <h3>Choisissez votre modèle</h3>
+                        <p>Parcourez nos collections et sélectionnez le sac qui vous correspond.</p>
+                    </div>
+                    
+                    <div class="etape">
+                        <div class="etape-numero">2</div>
+                        <h3>Personnalisez-le</h3>
+                        <p>Indiquez vos préférences : couleur, monogramme, dimensions.</p>
+                    </div>
+                    
+                    <div class="etape">
+                        <div class="etape-numero">3</div>
+                        <h3>Envoyez votre commande</h3>
+                        <p>Remplissez le formulaire, il s'ouvrira sur WhatsApp pour confirmation.</p>
+                    </div>
+                    
+                    <div class="etape">
+                        <div class="etape-numero">4</div>
+                        <h3>Confirmation & Paiement</h3>
+                        <p>Nous validons votre commande et vous envoyons le lien de paiement sécurisé.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulaire (COPIEZ VOTRE FORMULAIRE WHATSAPP ICI) -->
+    <section class="section-commande">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="form-titre">Formulaire de Commande</h2>
+                
+                <!-- COPIEZ TOUT VOTRE FORMULAIRE WHATSAPP-FORM ICI -->
+                <form name="commande-sac" method="GET" action="https://api.whatsapp.com/send" target="_blank"
+                    class="whatsapp-form">
+                    <!-- ... votre formulaire complet ... -->
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Maison de Maroquinerie. Tous droits réservés.</p>
+            <p class="footer-info">Fabrication française • Livraison 10-15 jours • Retours acceptés sous 14 jours</p>
+            <p class="footer-note">Site hébergé sur Netlify • Formulaire sécurisé</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
