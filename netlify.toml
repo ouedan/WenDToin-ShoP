@@ -1,31 +1,41 @@
 [build]
   publish = "."
+  command = "echo 'Build réussi'"
 
-# Redirection générale pour SPA
+# 1. D'ABORD les règles spécifiques
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/collections"
+  to = "/collections.html"
   status = 200
-
-# Redirections spécifiques pour améliorer le SEO
-[[redirects]]
-  from = "/produits"
-  to = "/index.html#produits"
-  status = 301
 
 [[redirects]]
   from = "/commande"
-  to = "/index.html#commande"
-  status = 301
+  to = "/commande.html"
+  status = 200
 
 [[redirects]]
   from = "/contact"
-  to = "/index.html#contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/atelier"
+  to = "/atelier.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin"
+  to = "/modifier.html"
+  status = 200
+
+# 2. ENSUITE les redirections 301 (anciens liens)
+[[redirects]]
+  from = "/produits"
+  to = "/collections.html"
   status = 301
 
-# Pour les URLs inexistantes
+# 3. ENFIN la règle générale pour les 404
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 404
-  force = true
